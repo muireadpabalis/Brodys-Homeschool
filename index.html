@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brody's Home School</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <p class="eyebrow">2026–2027 · Grade 7</p>
+    <h1>Brody's Home School</h1>
+    <p class="subtitle">Assignments, assessments, work samples, and progress — all in one place.</p>
+  </div>
+  <button id="printReportBtn" class="button secondary">Print Progress Report</button>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-view="dashboard">Dashboard</button>
+  <button class="tab" data-view="assignments">Assignments</button>
+  <button class="tab" data-view="assessments">Assessments</button>
+  <button class="tab" data-view="log">Daily Log</button>
+  <button class="tab" data-view="portfolio">Portfolio</button>
+  <button class="tab" data-view="reports">Reports</button>
+</nav>
+
+<main>
+<section id="dashboard" class="view active">
+  <div class="hero-card">
+    <div>
+      <p class="eyebrow">Welcome back, Brody</p>
+      <h2>What are we working on today?</h2>
+      <p id="todayText"></p>
+    </div>
+    <div class="progress-ring"><span id="overallPercent">0%</span><small>complete</small></div>
+  </div>
+
+  <div class="stats-grid">
+    <article class="stat-card"><span class="stat-number" id="dueCount">0</span><span>Open assignments</span></article>
+    <article class="stat-card"><span class="stat-number" id="completedCount">0</span><span>Completed assignments</span></article>
+    <article class="stat-card"><span class="stat-number" id="minutesCount">0</span><span>Minutes logged</span></article>
+    <article class="stat-card"><span class="stat-number" id="portfolioCount">0</span><span>Portfolio entries</span></article>
+  </div>
+
+  <div class="two-column">
+    <section class="panel">
+      <div class="panel-heading"><h3>Next assignments</h3><button class="link-button" data-go="assignments">View all</button></div>
+      <div id="nextAssignments" class="stack"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-heading"><h3>Recent learning</h3><button class="link-button" data-go="log">Add log</button></div>
+      <div id="recentLogs" class="stack"></div>
+    </section>
+  </div>
+</section>
+
+<section id="assignments" class="view">
+  <div class="section-heading">
+    <div><p class="eyebrow">Schoolwork</p><h2>Assignments</h2></div>
+    <button id="addAssignmentBtn" class="button">+ Add Assignment</button>
+  </div>
+  <div class="filter-row">
+    <select id="subjectFilter">
+      <option value="all">All subjects</option><option>English Language Arts</option><option>Mathematics</option>
+      <option>Science</option><option>Social Studies</option><option>Health</option><option>Physical Education</option>
+      <option>Fine Arts</option><option>Technology</option>
+    </select>
+    <select id="statusFilter"><option value="all">All statuses</option><option value="open">Open</option><option value="complete">Complete</option></select>
+  </div>
+  <div id="assignmentList" class="card-list"></div>
+</section>
+
+<section id="assessments" class="view">
+  <div class="section-heading"><div><p class="eyebrow">Baseline + Progress Checks</p><h2>Assessments</h2></div></div>
+  <div class="assessment-intro panel">
+    <h3>Assessment Week</h3>
+    <p>Use this area for Brody's baseline assessments and later progress checks. Results can be recorded here and carried into his progress reports.</p>
+  </div>
+  <div id="assessmentList" class="card-list"></div>
+</section>
+
+<section id="log" class="view">
+  <div class="section-heading"><div><p class="eyebrow">Documentation</p><h2>Daily Learning Log</h2></div></div>
+  <form id="logForm" class="panel form-grid">
+    <label>Date<input type="date" id="logDate" required></label>
+    <label>Subject<select id="logSubject" required>
+      <option>English Language Arts</option><option>Mathematics</option><option>Science</option><option>Social Studies</option>
+      <option>Health</option><option>Physical Education</option><option>Fine Arts</option><option>Technology</option>
+    </select></label>
+    <label>Minutes<input type="number" id="logMinutes" min="1" step="1" required></label>
+    <label class="full">What did you work on?<textarea id="logActivity" rows="3" required></textarea></label>
+    <label class="full">Notes / what I learned<textarea id="logNotes" rows="3"></textarea></label>
+    <div class="full"><button class="button" type="submit">Save Learning Log</button></div>
+  </form>
+  <div id="logList" class="card-list"></div>
+</section>
+
+<section id="portfolio" class="view">
+  <div class="section-heading">
+    <div><p class="eyebrow">Work Samples</p><h2>Portfolio</h2></div>
+    <button id="addPortfolioBtn" class="button">+ Add Work Sample</button>
+  </div>
+  <p class="section-note">Save a title, description, date, subject, and optional link to a photo, PDF, document, or other work sample.</p>
+  <div id="portfolioList" class="card-list"></div>
+</section>
+
+<section id="reports" class="view">
+  <div class="section-heading"><div><p class="eyebrow">Parent Records</p><h2>Progress Reports</h2></div></div>
+  <div class="report-grid">
+    <article class="panel"><h3>Current Summary</h3><div id="reportSummary"></div></article>
+    <article class="panel">
+      <h3>Export Records</h3>
+      <p>Export a complete copy of Brody's school record from this browser.</p>
+      <div class="button-stack">
+        <button id="exportJsonBtn" class="button">Export Full Record (.json)</button>
+        <button id="exportCsvBtn" class="button secondary">Export Learning Log (.csv)</button>
+      </div>
+      <p class="privacy-note"><strong>Important:</strong> this starter version stores progress only in this browser. Export regularly so the record is backed up.</p>
+    </article>
+  </div>
+</section>
+</main>
+
+<dialog id="assignmentDialog">
+<form id="assignmentForm" class="dialog-form">
+  <div class="dialog-heading"><h2>Add Assignment</h2><button type="button" class="icon-button close-dialog">×</button></div>
+  <label>Title<input id="assignmentTitle" required></label>
+  <label>Subject<select id="assignmentSubject">
+    <option>English Language Arts</option><option>Mathematics</option><option>Science</option><option>Social Studies</option>
+    <option>Health</option><option>Physical Education</option><option>Fine Arts</option><option>Technology</option>
+  </select></label>
+  <label>Due date<input type="date" id="assignmentDue"></label>
+  <label>Description<textarea id="assignmentDescription" rows="4"></textarea></label>
+  <label>Resource / assignment link<input type="url" id="assignmentLink" placeholder="https://..."></label>
+  <button class="button" type="submit">Save Assignment</button>
+</form>
+</dialog>
+
+<dialog id="portfolioDialog">
+<form id="portfolioForm" class="dialog-form">
+  <div class="dialog-heading"><h2>Add Work Sample</h2><button type="button" class="icon-button close-dialog">×</button></div>
+  <label>Title<input id="portfolioTitle" required></label>
+  <label>Subject<select id="portfolioSubject">
+    <option>English Language Arts</option><option>Mathematics</option><option>Science</option><option>Social Studies</option>
+    <option>Health</option><option>Physical Education</option><option>Fine Arts</option><option>Technology</option>
+  </select></label>
+  <label>Date<input type="date" id="portfolioDate" required></label>
+  <label>Description<textarea id="portfolioDescription" rows="4"></textarea></label>
+  <label>Evidence link<input type="url" id="portfolioLink" placeholder="https://..."></label>
+  <button class="button" type="submit">Save Work Sample</button>
+</form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
