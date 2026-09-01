@@ -18,6 +18,7 @@
 
 <nav class="tabs">
   <button class="tab active" data-view="dashboard">Dashboard</button>
+  <button class="tab" data-view="subjects">Subjects</button>
   <button class="tab" data-view="assignments">Assignments</button>
   <button class="tab" data-view="assessments">Assessments</button>
   <button class="tab" data-view="log">Daily Log</button>
@@ -55,6 +56,22 @@
   </div>
 </section>
 
+
+<section id="subjects" class="view">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">California Course of Study</p>
+      <h2>Subjects & Topics</h2>
+    </div>
+  </div>
+  <div class="panel standards-note">
+    <h3>How this site is organized</h3>
+    <p><strong>Instruction from this point forward follows California requirements and standards.</strong> Massachusetts standards are used only for baseline/exit diagnostics to identify what Brody had been taught and mastered before homeschooling began.</p>
+  </div>
+  <div id="subjectGrid" class="subject-grid"></div>
+  <div id="subjectDetail" class="panel subject-detail" hidden></div>
+</section>
+
 <section id="assignments" class="view">
   <div class="section-heading">
     <div><p class="eyebrow">Schoolwork</p><h2>Assignments</h2></div>
@@ -72,10 +89,10 @@
 </section>
 
 <section id="assessments" class="view">
-  <div class="section-heading"><div><p class="eyebrow">Baseline + Progress Checks</p><h2>Assessments</h2></div></div>
+  <div class="section-heading"><div><p class="eyebrow">Massachusetts Exit Baseline + Later Progress Checks</p><h2>Assessments</h2></div></div>
   <div class="assessment-intro panel">
     <h3>Assessment Week</h3>
-    <p>Use this area for Brody's baseline assessments and later progress checks. Results can be recorded here and carried into his progress reports.</p>
+    <p>Brody's initial baseline assessments use Massachusetts standards only, to establish where Grade 6 instruction left off. After the baseline is complete, instructional work and progress checks will be organized around California Grade 7 expectations.</p>
   </div>
   <div id="assessmentList" class="card-list"></div>
 </section>

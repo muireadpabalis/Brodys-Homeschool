@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Math Diagnostic · Brody's Home School</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.assess-wrap{max-width:980px;margin:0 auto;padding:24px}
+.assess-header{display:flex;gap:18px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:18px}
+.assess-header h1{margin:.2rem 0}.assess-note{max-width:720px;color:var(--muted)}
+.assess-progress{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px;min-width:180px}
+.progress-track{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:8px}.progress-fill{height:100%;background:var(--accent);width:0}
+.section-nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px}.section-nav button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 12px;cursor:pointer}
+.section-nav button.active{background:var(--accent);color:white;border-color:var(--accent)}
+.question-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;margin:0 0 16px}
+.question-number{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+.question-card h3{font-size:1.08rem;line-height:1.5;margin:7px 0 14px}
+.choices{display:grid;gap:9px}.choice{display:flex;gap:11px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;background:var(--surface)}
+.choice:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 18%,transparent)}
+.choice input{margin-top:3px;transform:scale(1.15)}.choice-letter{font-weight:700;min-width:20px}
+.assess-actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:24px 0}
+.submit-panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;margin:20px 0}
+.warning{color:#8a4b00;font-weight:600}.done-panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;text-align:center;margin:28px 0}
+.small-muted{font-size:.9rem;color:var(--muted)}.locked .choice{cursor:default;opacity:.9}
+@media(max-width:600px){.assess-wrap{padding:16px}.question-card{padding:16px}.assess-actions .button{width:100%}}
+</style>
+</head>
+<body>
+<div class="assess-wrap">
+  <div class="assess-header">
+    <div>
+      <p class="eyebrow">One-time diagnostic</p>
+      <h1>Mathematics Assessment</h1>
+      <p class="assess-note">Work carefully and choose the best answer for each question. You may go back and change any answer before you submit. There is no time limit. Use scratch paper if you want. Do not use a calculator unless an adult tells you to.</p>
+    </div>
+    <div class="assess-progress" aria-live="polite">
+      <strong id="answeredCount">0 of 68 answered</strong>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <div class="small-muted">Your work saves in this browser.</div>
+    </div>
+  </div>
+
+  <div id="sectionNav" class="section-nav" aria-label="Assessment sections"></div>
+  <div id="assessmentRoot"></div>
+
+  <div id="submitPanel" class="submit-panel">
+    <h2>Ready to turn it in?</h2>
+    <p>You can review and change any answer before submitting. After you submit, this assessment is locked and cannot be retaken from this browser.</p>
+    <p id="unansweredWarning" class="warning"></p>
+    <div class="assess-actions">
+      <a class="button secondary" href="index.html">Return to Home School</a>
+      <button id="submitAssessmentBtn" class="button" type="button">Submit Assessment</button>
+    </div>
+  </div>
+
+  <div id="donePanel" class="done-panel" hidden>
+    <h2>Assessment submitted</h2>
+    <p>Your responses have been saved. Please tell a parent that you are finished.</p>
+    <div class="assess-actions" style="justify-content:center">
+      <button id="downloadParentBtn" class="button secondary" type="button">Download Parent Archive</button>
+      <a class="button" href="index.html">Return to Home School</a>
+    </div>
+  </div>
+</div>
+<script src="math-assessment.js"></script>
+</body>
+</html>
