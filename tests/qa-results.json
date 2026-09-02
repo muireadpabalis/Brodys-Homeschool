@@ -1,0 +1,19 @@
+{
+  "passed": 14,
+  "results": [
+    "Brody canonical navigation, legacy records and five integrated assessments",
+    "Brody reading: 35 items, A–E, required responses, navigation, edits, resume and lock",
+    "Brody writing: 27 items, A–E, required responses, navigation, edits, resume and lock",
+    "Brody science: 35 items, A–E, required responses, navigation, edits, resume and lock",
+    "Brody history: 40 items, A–E, required responses, navigation, edits, resume and lock",
+    "Brody math required responses, E, saved progress and hidden locked attempt",
+    "Brody parent gate, JSON/CSV exports, complete backup, rubric persistence, print and no runtime errors",
+    "Rory canonical navigation, legacy records and five integrated assessments",
+    "Rory reading: 35 items, A–E, required responses, navigation, edits, resume and lock",
+    "Rory writing: 27 items, A–E, required responses, navigation, edits, resume and lock",
+    "Rory science: 35 items, A–E, required responses, navigation, edits, resume and lock",
+    "Rory history: 35 items, A–E, required responses, navigation, edits, resume and lock",
+    "Rory math required responses, E, saved progress and hidden locked attempt",
+    "Rory parent gate, JSON/CSV exports, complete backup, rubric persistence, print and no runtime errors"
+  ]
+}
