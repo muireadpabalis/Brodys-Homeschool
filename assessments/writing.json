@@ -1,0 +1,341 @@
+{
+  "student": "Brody",
+  "subject": "writing",
+  "title": "Writing / Language Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "writing-1",
+      "type": "choice",
+      "prompt": "Which sentence uses correct agreement?",
+      "options": [
+        "The basket of apples are on the table.",
+        "The basket of apples were on the table now.",
+        "The basket of apples is on the table.",
+        "The basket of apples be on the table.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-2",
+      "type": "choice",
+      "prompt": "Which is a complete sentence?",
+      "options": [
+        "Because the rain stopped.",
+        "The rain stopped before noon.",
+        "Under the old bridge.",
+        "Running toward the house.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-3",
+      "type": "choice",
+      "prompt": "Choose the correct pronoun: Maya and I finished ___ project.",
+      "options": [
+        "our",
+        "her",
+        "its",
+        "his",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-4",
+      "type": "choice",
+      "prompt": "Choose the consistent sentence.",
+      "options": [
+        "Yesterday we walk to the lake and watched birds.",
+        "Yesterday we walked to the lake and watches birds.",
+        "Yesterday we walking to the lake and watched birds.",
+        "Yesterday we walked to the lake and watched birds.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-5",
+      "type": "choice",
+      "prompt": "Which sentence correctly joins two complete thoughts?",
+      "options": [
+        "The wind rose the boat returned.",
+        "The wind rose, the boat returned.",
+        "The wind rose, and the boat returned.",
+        "The wind rose and because the boat returned.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-6",
+      "type": "choice",
+      "prompt": "Which sentence makes the cause clear?",
+      "options": [
+        "The bridge was closed, we another route.",
+        "Because the bridge was closed, we took another route.",
+        "We took another route the bridge closed.",
+        "The bridge because closed another route.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-7",
+      "type": "choice",
+      "prompt": "Which group of words contains both a subject and a verb?",
+      "options": [
+        "After the bell rang",
+        "Beside the classroom door",
+        "During the long storm",
+        "With a careful plan",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-8",
+      "type": "choice",
+      "prompt": "Which sentence clearly says the cyclist wore a red helmet?",
+      "options": [
+        "The cyclist crossed the bridge wearing red bricks.",
+        "Wearing a red helmet, the bridge was crossed.",
+        "The bridge wearing a red helmet had a cyclist.",
+        "Wearing a red helmet, the cyclist crossed the bridge.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-9",
+      "type": "choice",
+      "prompt": "Choose the correctly punctuated sentence.",
+      "options": [
+        "Our coach a former runner, led the warm-up.",
+        "Our coach, a former runner led the warm-up.",
+        "Our coach, a former runner, led the warm-up.",
+        "Our coach a, former runner led the warm-up.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-10",
+      "type": "choice",
+      "prompt": "Choose the word: Please put the books over ___.",
+      "options": [
+        "their",
+        "there",
+        "they're",
+        "theirs",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-11",
+      "type": "choice",
+      "prompt": "Which phrase refers to the notebooks belonging to several students?",
+      "options": [
+        "the students' notebooks",
+        "the student's notebooks",
+        "the students notebook's",
+        "the student notebook's",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-12",
+      "type": "choice",
+      "prompt": "Which revision is most concise without losing meaning: The final result at the end was a success?",
+      "options": [
+        "The final final result was a success at the end.",
+        "At the ending conclusion the result succeeded successfully.",
+        "The result.",
+        "The result was a success.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-13",
+      "type": "choice",
+      "prompt": "Which sentence best fits a formal report?",
+      "options": [
+        "This thing is super awesome, you know?",
+        "Wow, what a totally cool gizmo!",
+        "The results suggest that the new design is more efficient.",
+        "The stuff did its thing or whatever.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-14",
+      "type": "choice",
+      "prompt": "Which topic sentence fits details about bus routes, bike lanes, and sidewalks?",
+      "options": [
+        "The town's oldest building is a library.",
+        "The town offers several ways to travel without a car.",
+        "The town has many kinds of birds.",
+        "The town celebrated its anniversary.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-15",
+      "type": "choice",
+      "prompt": "Which detail best supports a claim that a later library closing time would help students?",
+      "options": [
+        "Thirty students reported arriving after the current closing time.",
+        "The library has blue curtains.",
+        "The library opened fifty years ago.",
+        "A librarian enjoys mystery novels.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-16",
+      "type": "choice",
+      "prompt": "Choose the transition: The new design is lighter. ___, it costs more.",
+      "options": [
+        "For example",
+        "Similarly",
+        "As a result of being cheaper",
+        "However",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-17",
+      "type": "choice",
+      "prompt": "Which transition shows the next step in a process?",
+      "options": [
+        "In contrast, attach the lid.",
+        "Despite the lid, attach.",
+        "Next, attach the lid.",
+        "For the opposite reason, lid.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-18",
+      "type": "choice",
+      "prompt": "Which revision most precisely describes an experiment?",
+      "options": [
+        "The thing changed a bit.",
+        "The metal rod expanded by 2 millimeters when heated.",
+        "The stuff did something odd.",
+        "It got sort of different somehow.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-19",
+      "type": "choice",
+      "prompt": "How should a writer use an idea from a source?",
+      "options": [
+        "Restate it accurately in original wording and credit the source.",
+        "Copy it exactly without quotation marks or credit.",
+        "Change one word and claim the idea as original.",
+        "Invent a source that sounds scholarly.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-20",
+      "type": "choice",
+      "prompt": "Which sentence shows nervousness through a concrete detail?",
+      "options": [
+        "I was a person in a room.",
+        "The event took place on Tuesday.",
+        "There were people near the door.",
+        "I folded the corner of my note again while waiting for my name.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-21",
+      "type": "choice",
+      "prompt": "Which revision clearly identifies who was walking: Walking to school, the storm surprised Eli?",
+      "options": [
+        "Walking to school, the storm surprised itself.",
+        "The storm walking to school surprised Eli.",
+        "While Eli was walking to school, the storm surprised him.",
+        "Walking to school, there was a storm.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-22",
+      "type": "choice",
+      "prompt": "Which sentence acknowledges an opposing view while supporting a garden?",
+      "options": [
+        "Everyone who dislikes gardens is foolish.",
+        "Although a garden requires care, shared watering shifts can make that work manageable.",
+        "Gardens have leaves and stems.",
+        "No one could possibly disagree with my plan.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-23",
+      "type": "choice",
+      "prompt": "Which sentence correctly punctuates the coordinate adjectives?",
+      "options": [
+        "It was a long, difficult journey.",
+        "It was a long difficult, journey.",
+        "It was, a long difficult journey.",
+        "It, was a long difficult journey.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-24",
+      "type": "choice",
+      "prompt": "After giving data that missed buses decreased, which sentence best connects that evidence to a schedule-change claim?",
+      "options": [
+        "The bus seats are green.",
+        "All schedules are equally effective.",
+        "Transportation is a word with many letters.",
+        "Fewer missed buses suggest the new departure time makes the service easier to use.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "writing-25",
+      "type": "writing",
+      "prompt": "Write an independent narrative about a time someone had to change a plan. Develop a clear sequence, a setting, a character response, and a meaningful ending. Use dialogue or description where useful. Aim for several paragraphs; there is no required word count.",
+      "options": [],
+      "passage": ""
+    },
+    {
+      "id": "writing-26",
+      "type": "writing",
+      "prompt": "Explain a process or topic you know well to a younger reader. Introduce it clearly, organize related ideas into paragraphs, use accurate details and useful transitions, and end with a conclusion. Write from your own knowledge; no research or outside assistance.",
+      "options": [],
+      "passage": ""
+    },
+    {
+      "id": "writing-27",
+      "type": "writing",
+      "prompt": "A homeschool group can spend one weekly afternoon on either a community service project or a student-designed investigation. Argue for one choice. State a clear claim, develop reasons with concrete examples, consider a possible objection, and conclude. Write several paragraphs independently.",
+      "options": [],
+      "passage": ""
+    }
+  ]
+}

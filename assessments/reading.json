@@ -1,0 +1,463 @@
+{
+  "student": "Brody",
+  "subject": "reading",
+  "title": "ELA / Reading Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "reading-1",
+      "type": "choice",
+      "prompt": "What happened before the packets were stored?",
+      "options": [
+        "Visitors returned new seeds.",
+        "Growers harvested plants.",
+        "Volunteers sorted and labeled the seeds.",
+        "Visitors planted every seed.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Seed Library\nFirst, volunteers sorted donated seeds and labeled each packet with its plant name and collection year. Next, they stored the packets in a dry cabinet. Visitors could borrow seeds to grow at home. At the end of the season, some growers returned newly collected seeds. The system depended on accurate labels: an unlabeled packet could not tell the next grower what to expect."
+    },
+    {
+      "id": "reading-2",
+      "type": "choice",
+      "prompt": "What does accurate mean here?",
+      "options": [
+        "Colorful and decorative",
+        "Correct and reliable",
+        "Brief and secret",
+        "Large and heavy",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Seed Library\nFirst, volunteers sorted donated seeds and labeled each packet with its plant name and collection year. Next, they stored the packets in a dry cabinet. Visitors could borrow seeds to grow at home. At the end of the season, some growers returned newly collected seeds. The system depended on accurate labels: an unlabeled packet could not tell the next grower what to expect."
+    },
+    {
+      "id": "reading-3",
+      "type": "choice",
+      "prompt": "Why were labels important?",
+      "options": [
+        "They told later growers what the packets contained.",
+        "They made all seeds grow faster.",
+        "They kept insects out of the cabinet.",
+        "They replaced the need to collect seeds.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Seed Library\nFirst, volunteers sorted donated seeds and labeled each packet with its plant name and collection year. Next, they stored the packets in a dry cabinet. Visitors could borrow seeds to grow at home. At the end of the season, some growers returned newly collected seeds. The system depended on accurate labels: an unlabeled packet could not tell the next grower what to expect."
+    },
+    {
+      "id": "reading-4",
+      "type": "choice",
+      "prompt": "Which best summarizes the passage?",
+      "options": [
+        "Seeds can only grow in cabinets.",
+        "Visitors must return the same seeds they borrowed.",
+        "Volunteers stopped people from gardening.",
+        "A seed-sharing system depends on sorting, storage, and useful information.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Seed Library\nFirst, volunteers sorted donated seeds and labeled each packet with its plant name and collection year. Next, they stored the packets in a dry cabinet. Visitors could borrow seeds to grow at home. At the end of the season, some growers returned newly collected seeds. The system depended on accurate labels: an unlabeled packet could not tell the next grower what to expect."
+    },
+    {
+      "id": "reading-5",
+      "type": "choice",
+      "prompt": "What did Mara erase at home?",
+      "options": [
+        "The entire creek",
+        "Her neighbor's question",
+        "The decorative border",
+        "The footbridge",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-6",
+      "type": "choice",
+      "prompt": "Why does Mara initially keep her notebook closed?",
+      "options": [
+        "She has forgotten how to draw.",
+        "She is reluctant to confront the map's missing details.",
+        "She wants to give her notebook away.",
+        "She thinks the creek has no water.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-7",
+      "type": "choice",
+      "prompt": "How does Mara change?",
+      "options": [
+        "She values usefulness more than a polished appearance.",
+        "She decides maps should never change.",
+        "She stops listening to her neighbor.",
+        "She chooses decoration over information.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-8",
+      "type": "choice",
+      "prompt": "Which theme is best supported?",
+      "options": [
+        "The simplest picture is always the truest.",
+        "Adults should complete children's work.",
+        "A beautiful border solves practical problems.",
+        "Honest revision can make work more useful.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-9",
+      "type": "choice",
+      "prompt": "Which detail best supports that Mara's revision helped others?",
+      "options": [
+        "She had drawn a blue line.",
+        "Her grandfather walked on Saturday.",
+        "She could point to an answer when her neighbor asked about stormwater.",
+        "The creek split around gravel.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-10",
+      "type": "choice",
+      "prompt": "Who tells this story?",
+      "options": [
+        "Mara speaking directly as I",
+        "A third-person narrator describing Mara's actions",
+        "The grandfather describing his childhood",
+        "The neighbor writing a letter",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-11",
+      "type": "choice",
+      "prompt": "What does polished mean in the last paragraph?",
+      "options": [
+        "Refined in appearance",
+        "Covered with furniture wax",
+        "Sharpened to a point",
+        "Completely waterproof",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-12",
+      "type": "choice",
+      "prompt": "What is the effect of the grandfather's question?",
+      "options": [
+        "It explains how to decorate the border.",
+        "It proves the creek is a straight line.",
+        "It ends the walk immediately.",
+        "It prompts Mara to consider who needs the map.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-13",
+      "type": "choice",
+      "prompt": "Which is the central idea?",
+      "options": [
+        "Every tree lowers temperatures by exactly seven degrees.",
+        "Paving material never affects temperature.",
+        "Trees can cool sidewalks, but planting decisions need local evidence.",
+        "Trees eliminate all problems caused by heat.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Cooler Streets\nOn hot afternoons, pavement stores heat and releases it slowly. Shade trees can reduce the sunlight reaching a sidewalk. Water evaporating from leaves can also cool the surrounding air. These benefits vary with tree size, species, water supply, and location.\nA neighborhood group measured sidewalk temperatures at noon on three clear days. The shaded site averaged 29°C; the unshaded site averaged 36°C. Both sites had the same paving material. The group recommended planting trees along a busy walking route.\nThe measurements support a local cooling benefit, but they do not prove that every tree will lower every sidewalk temperature by seven degrees. Underground utilities and limited planting space also matter. A useful plan combines measurements with information about each location."
+    },
+    {
+      "id": "reading-14",
+      "type": "choice",
+      "prompt": "Which evidence directly supports a local cooling benefit?",
+      "options": [
+        "The route was busy.",
+        "The shaded site averaged 29°C and the unshaded site 36°C.",
+        "Underground utilities exist.",
+        "The group recommended planting.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Cooler Streets\nOn hot afternoons, pavement stores heat and releases it slowly. Shade trees can reduce the sunlight reaching a sidewalk. Water evaporating from leaves can also cool the surrounding air. These benefits vary with tree size, species, water supply, and location.\nA neighborhood group measured sidewalk temperatures at noon on three clear days. The shaded site averaged 29°C; the unshaded site averaged 36°C. Both sites had the same paving material. The group recommended planting trees along a busy walking route.\nThe measurements support a local cooling benefit, but they do not prove that every tree will lower every sidewalk temperature by seven degrees. Underground utilities and limited planting space also matter. A useful plan combines measurements with information about each location."
+    },
+    {
+      "id": "reading-15",
+      "type": "choice",
+      "prompt": "How is the passage mainly organized?",
+      "options": [
+        "Explanation of cooling, local evidence, then limits on the recommendation",
+        "A fictional conflict followed by a resolution",
+        "A list of unrelated dates",
+        "A biography from childhood to adulthood",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Cooler Streets\nOn hot afternoons, pavement stores heat and releases it slowly. Shade trees can reduce the sunlight reaching a sidewalk. Water evaporating from leaves can also cool the surrounding air. These benefits vary with tree size, species, water supply, and location.\nA neighborhood group measured sidewalk temperatures at noon on three clear days. The shaded site averaged 29°C; the unshaded site averaged 36°C. Both sites had the same paving material. The group recommended planting trees along a busy walking route.\nThe measurements support a local cooling benefit, but they do not prove that every tree will lower every sidewalk temperature by seven degrees. Underground utilities and limited planting space also matter. A useful plan combines measurements with information about each location."
+    },
+    {
+      "id": "reading-16",
+      "type": "choice",
+      "prompt": "Why does the author mention utilities and planting space?",
+      "options": [
+        "To argue that temperature measurements are useless",
+        "To claim every sidewalk has identical conditions",
+        "To describe how buses are built",
+        "To explain practical limits a plan must consider",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Cooler Streets\nOn hot afternoons, pavement stores heat and releases it slowly. Shade trees can reduce the sunlight reaching a sidewalk. Water evaporating from leaves can also cool the surrounding air. These benefits vary with tree size, species, water supply, and location.\nA neighborhood group measured sidewalk temperatures at noon on three clear days. The shaded site averaged 29°C; the unshaded site averaged 36°C. Both sites had the same paving material. The group recommended planting trees along a busy walking route.\nThe measurements support a local cooling benefit, but they do not prove that every tree will lower every sidewalk temperature by seven degrees. Underground utilities and limited planting space also matter. A useful plan combines measurements with information about each location."
+    },
+    {
+      "id": "reading-17",
+      "type": "choice",
+      "prompt": "What does vary mean in the first paragraph?",
+      "options": [
+        "Remain exactly the same",
+        "Disappear forever",
+        "Differ depending on conditions",
+        "Become false",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Cooler Streets\nOn hot afternoons, pavement stores heat and releases it slowly. Shade trees can reduce the sunlight reaching a sidewalk. Water evaporating from leaves can also cool the surrounding air. These benefits vary with tree size, species, water supply, and location.\nA neighborhood group measured sidewalk temperatures at noon on three clear days. The shaded site averaged 29°C; the unshaded site averaged 36°C. Both sites had the same paving material. The group recommended planting trees along a busy walking route.\nThe measurements support a local cooling benefit, but they do not prove that every tree will lower every sidewalk temperature by seven degrees. Underground utilities and limited planting space also matter. A useful plan combines measurements with information about each location."
+    },
+    {
+      "id": "reading-18",
+      "type": "choice",
+      "prompt": "Which statement goes beyond the evidence given?",
+      "options": [
+        "These two sites had different average temperatures.",
+        "Every sidewalk will cool by seven degrees after any tree is planted.",
+        "The group measured on three days.",
+        "Both sites used the same paving material.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Cooler Streets\nOn hot afternoons, pavement stores heat and releases it slowly. Shade trees can reduce the sunlight reaching a sidewalk. Water evaporating from leaves can also cool the surrounding air. These benefits vary with tree size, species, water supply, and location.\nA neighborhood group measured sidewalk temperatures at noon on three clear days. The shaded site averaged 29°C; the unshaded site averaged 36°C. Both sites had the same paving material. The group recommended planting trees along a busy walking route.\nThe measurements support a local cooling benefit, but they do not prove that every tree will lower every sidewalk temperature by seven degrees. Underground utilities and limited planting space also matter. A useful plan combines measurements with information about each location."
+    },
+    {
+      "id": "reading-19",
+      "type": "choice",
+      "prompt": "What are the mirrors in the first line?",
+      "options": [
+        "Puddles reflecting the sky",
+        "Glass panels installed in the road",
+        "Bus windows falling to the ground",
+        "Stars visible at noon",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "After the Storm\nThe street wore mirrors after rain;\neach puddle held a piece of sky.\nA bus swept through the silver lane,\nand scattered clouds went racing by.\nI stopped beside one quiet pool:\nthe trembling world grew still again."
+    },
+    {
+      "id": "reading-20",
+      "type": "choice",
+      "prompt": "Which sense is most directly used in the phrase silver lane?",
+      "options": [
+        "Taste",
+        "Smell",
+        "Touch",
+        "Sight",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "After the Storm\nThe street wore mirrors after rain;\neach puddle held a piece of sky.\nA bus swept through the silver lane,\nand scattered clouds went racing by.\nI stopped beside one quiet pool:\nthe trembling world grew still again."
+    },
+    {
+      "id": "reading-21",
+      "type": "choice",
+      "prompt": "Why do scattered clouds seem to race by?",
+      "options": [
+        "The bus pushes real clouds into space.",
+        "The speaker is inside an airplane.",
+        "The bus disturbs reflections in the water.",
+        "The rain turns into smoke.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "After the Storm\nThe street wore mirrors after rain;\neach puddle held a piece of sky.\nA bus swept through the silver lane,\nand scattered clouds went racing by.\nI stopped beside one quiet pool:\nthe trembling world grew still again."
+    },
+    {
+      "id": "reading-22",
+      "type": "choice",
+      "prompt": "How does the ending change the mood?",
+      "options": [
+        "It changes from calm to anger.",
+        "It returns from movement to calm.",
+        "It introduces a noisy argument.",
+        "It ends with growing danger.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "After the Storm\nThe street wore mirrors after rain;\neach puddle held a piece of sky.\nA bus swept through the silver lane,\nand scattered clouds went racing by.\nI stopped beside one quiet pool:\nthe trembling world grew still again."
+    },
+    {
+      "id": "reading-23",
+      "type": "choice",
+      "prompt": "What do both writers want?",
+      "options": [
+        "A useful purpose for the empty library room",
+        "The library to close after school",
+        "All tables to be removed",
+        "Visitors to stop making suggestions",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Views of the Library's Empty Room\nText A — Student letter: Our library should use its empty room for quiet study. Last month I could not find a quiet seat on four afternoons. Students need somewhere to concentrate after school. A study room could open immediately with the tables we already own.\nText B — Librarian's proposal: The empty room should become a workshop. A survey of 80 visitors found that 52 wanted classes in repairing household items. We could offer quiet study there when classes are not running. Workshops would require supplies and a volunteer coordinator, so we should test the plan for one month before making it permanent."
+    },
+    {
+      "id": "reading-24",
+      "type": "choice",
+      "prompt": "How does their supporting evidence differ?",
+      "options": [
+        "A uses a survey; B uses an ancient document.",
+        "Both rely only on fictional characters.",
+        "Neither gives any reason for a proposal.",
+        "A uses personal experience; B uses a visitor survey.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Views of the Library's Empty Room\nText A — Student letter: Our library should use its empty room for quiet study. Last month I could not find a quiet seat on four afternoons. Students need somewhere to concentrate after school. A study room could open immediately with the tables we already own.\nText B — Librarian's proposal: The empty room should become a workshop. A survey of 80 visitors found that 52 wanted classes in repairing household items. We could offer quiet study there when classes are not running. Workshops would require supplies and a volunteer coordinator, so we should test the plan for one month before making it permanent."
+    },
+    {
+      "id": "reading-25",
+      "type": "choice",
+      "prompt": "Which evidence most directly supports demand for workshops?",
+      "options": [
+        "The tables are already owned.",
+        "One student needed quiet seats.",
+        "52 of 80 surveyed visitors wanted repair classes.",
+        "The room is empty.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Views of the Library's Empty Room\nText A — Student letter: Our library should use its empty room for quiet study. Last month I could not find a quiet seat on four afternoons. Students need somewhere to concentrate after school. A study room could open immediately with the tables we already own.\nText B — Librarian's proposal: The empty room should become a workshop. A survey of 80 visitors found that 52 wanted classes in repairing household items. We could offer quiet study there when classes are not running. Workshops would require supplies and a volunteer coordinator, so we should test the plan for one month before making it permanent."
+    },
+    {
+      "id": "reading-26",
+      "type": "choice",
+      "prompt": "Why does B propose a one-month test?",
+      "options": [
+        "The room will disappear after a month.",
+        "The plan requires resources and should be evaluated before continuing.",
+        "The survey proves no one wants classes.",
+        "Quiet study is illegal during workshops.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Views of the Library's Empty Room\nText A — Student letter: Our library should use its empty room for quiet study. Last month I could not find a quiet seat on four afternoons. Students need somewhere to concentrate after school. A study room could open immediately with the tables we already own.\nText B — Librarian's proposal: The empty room should become a workshop. A survey of 80 visitors found that 52 wanted classes in repairing household items. We could offer quiet study there when classes are not running. Workshops would require supplies and a volunteer coordinator, so we should test the plan for one month before making it permanent."
+    },
+    {
+      "id": "reading-27",
+      "type": "choice",
+      "prompt": "What does permanent mean here?",
+      "options": [
+        "Continuing rather than temporary",
+        "Open only for an hour",
+        "Available only outdoors",
+        "Decided by one student",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Views of the Library's Empty Room\nText A — Student letter: Our library should use its empty room for quiet study. Last month I could not find a quiet seat on four afternoons. Students need somewhere to concentrate after school. A study room could open immediately with the tables we already own.\nText B — Librarian's proposal: The empty room should become a workshop. A survey of 80 visitors found that 52 wanted classes in repairing household items. We could offer quiet study there when classes are not running. Workshops would require supplies and a volunteer coordinator, so we should test the plan for one month before making it permanent."
+    },
+    {
+      "id": "reading-28",
+      "type": "choice",
+      "prompt": "Which statement accurately describes the disagreement?",
+      "options": [
+        "They agree the room must always remain empty.",
+        "A supports repair classes and B forbids them.",
+        "Both reject sharing the room at different times.",
+        "They differ on the main use, while B still allows some quiet study.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Views of the Library's Empty Room\nText A — Student letter: Our library should use its empty room for quiet study. Last month I could not find a quiet seat on four afternoons. Students need somewhere to concentrate after school. A study room could open immediately with the tables we already own.\nText B — Librarian's proposal: The empty room should become a workshop. A survey of 80 visitors found that 52 wanted classes in repairing household items. We could offer quiet study there when classes are not running. Workshops would require supplies and a volunteer coordinator, so we should test the plan for one month before making it permanent."
+    },
+    {
+      "id": "reading-29",
+      "type": "choice",
+      "prompt": "What additional information would best test whether B's survey represents library users?",
+      "options": [
+        "The color of the survey paper",
+        "The librarian's favorite novel",
+        "How visitors were selected and when the survey was offered",
+        "The number of windows in the room",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Views of the Library's Empty Room\nText A — Student letter: Our library should use its empty room for quiet study. Last month I could not find a quiet seat on four afternoons. Students need somewhere to concentrate after school. A study room could open immediately with the tables we already own.\nText B — Librarian's proposal: The empty room should become a workshop. A survey of 80 visitors found that 52 wanted classes in repairing household items. We could offer quiet study there when classes are not running. Workshops would require supplies and a volunteer coordinator, so we should test the plan for one month before making it permanent."
+    },
+    {
+      "id": "reading-30",
+      "type": "choice",
+      "prompt": "How does walking beside the creek affect the plot?",
+      "options": [
+        "It removes the need for a legend.",
+        "It exposes missing features and leads Mara to revise her map.",
+        "It prevents Mara from seeing the creek.",
+        "It shows that the original map was complete.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-31",
+      "type": "choice",
+      "prompt": "Which pair best supports that Mara now prioritizes useful detail?",
+      "options": [
+        "She adds the pipe and makes room for a legend.",
+        "She uses blue and walks on Saturday.",
+        "The road exists and the parking lot is nearby.",
+        "Her grandfather speaks and the creek flows.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Unfinished Map\nMara had drawn the neighborhood creek as a neat blue line for the town exhibit. On Saturday, her grandfather walked the route with her. At the footbridge, the creek split around a mound of gravel. Farther downstream, water disappeared beneath a road and emerged beside a parking lot.\n“My map looks simpler,” Mara said, keeping her notebook closed.\n“Simpler for whom?” he asked.\nShe opened it. Beside the blue line she sketched the hidden pipe, the gravel, and a path people actually used. At home she erased the decorative border to make room for a legend. The page looked less polished, but when her neighbor asked where the water went after a storm, Mara could finally point to an answer."
+    },
+    {
+      "id": "reading-32",
+      "type": "choice",
+      "prompt": "Which revised claim best respects the findings?",
+      "options": [
+        "Any tree will always reduce temperature by seven degrees.",
+        "The measurements prove trees are the only cause of temperature differences in every location.",
+        "The study proves every nearby street needs exactly the same planting design.",
+        "At the measured sites and times, the shaded sidewalk was cooler on average.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Cooler Streets\nOn hot afternoons, pavement stores heat and releases it slowly. Shade trees can reduce the sunlight reaching a sidewalk. Water evaporating from leaves can also cool the surrounding air. These benefits vary with tree size, species, water supply, and location.\nA neighborhood group measured sidewalk temperatures at noon on three clear days. The shaded site averaged 29°C; the unshaded site averaged 36°C. Both sites had the same paving material. The group recommended planting trees along a busy walking route.\nThe measurements support a local cooling benefit, but they do not prove that every tree will lower every sidewalk temperature by seven degrees. Underground utilities and limited planting space also matter. A useful plan combines measurements with information about each location."
+    },
+    {
+      "id": "reading-33",
+      "type": "choice",
+      "prompt": "What does the shift from a passing bus to a quiet pool emphasize?",
+      "options": [
+        "A change from winter to summer",
+        "A debate between two drivers",
+        "A contrast between disruption and stillness",
+        "A list of bus routes",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "After the Storm\nThe street wore mirrors after rain;\neach puddle held a piece of sky.\nA bus swept through the silver lane,\nand scattered clouds went racing by.\nI stopped beside one quiet pool:\nthe trembling world grew still again."
+    },
+    {
+      "id": "reading-34",
+      "type": "choice",
+      "prompt": "Which plan responds to a concern raised by each writer?",
+      "options": [
+        "Use the room only for storage.",
+        "Reserve quiet study hours and pilot workshops at other times.",
+        "Remove all furniture and cancel the survey.",
+        "Keep the room closed until next year without a trial.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Views of the Library's Empty Room\nText A — Student letter: Our library should use its empty room for quiet study. Last month I could not find a quiet seat on four afternoons. Students need somewhere to concentrate after school. A study room could open immediately with the tables we already own.\nText B — Librarian's proposal: The empty room should become a workshop. A survey of 80 visitors found that 52 wanted classes in repairing household items. We could offer quiet study there when classes are not running. Workshops would require supplies and a volunteer coordinator, so we should test the plan for one month before making it permanent."
+    },
+    {
+      "id": "reading-35",
+      "type": "choice",
+      "prompt": "What would most strengthen the planting recommendation for another street?",
+      "options": [
+        "Measurements and site information from that street",
+        "Only photographs of an unrelated forest",
+        "Repeating the same conclusion without new observations",
+        "Counting how many people liked the original recommendation",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Cooler Streets\nOn hot afternoons, pavement stores heat and releases it slowly. Shade trees can reduce the sunlight reaching a sidewalk. Water evaporating from leaves can also cool the surrounding air. These benefits vary with tree size, species, water supply, and location.\nA neighborhood group measured sidewalk temperatures at noon on three clear days. The shaded site averaged 29°C; the unshaded site averaged 36°C. Both sites had the same paving material. The group recommended planting trees along a busy walking route.\nThe measurements support a local cooling benefit, but they do not prove that every tree will lower every sidewalk temperature by seven degrees. Underground utilities and limited planting space also matter. A useful plan combines measurements with information about each location."
+    }
+  ]
+}
