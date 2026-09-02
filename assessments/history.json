@@ -1,0 +1,528 @@
+{
+  "student": "Brody",
+  "subject": "history",
+  "title": "History–Social Science / Geography Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "history-1",
+      "type": "choice",
+      "prompt": "Which date is earliest?",
+      "options": [
+        "800 BCE",
+        "200 BCE",
+        "1200 BCE",
+        "100 CE",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-2",
+      "type": "choice",
+      "prompt": "A map scale says 1 cm represents 100 km. Two cities are 3 cm apart on the map. What is the represented distance?",
+      "options": [
+        "30 km",
+        "300 km",
+        "103 km",
+        "3,000 km",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-3",
+      "type": "choice",
+      "prompt": "Which is a primary source for daily life in an ancient city?",
+      "options": [
+        "A letter written by a resident at the time",
+        "A modern novel set in the city",
+        "A present-day textbook chapter",
+        "A film made last year about the city",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-4",
+      "type": "choice",
+      "prompt": "Two accounts disagree about a battle. What should a historian do?",
+      "options": [
+        "Accept whichever account is shorter.",
+        "Assume both contain no useful information.",
+        "Choose the account with prettier handwriting.",
+        "Compare their evidence, authors, purposes, and other sources.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-5",
+      "type": "choice",
+      "prompt": "The map's north arrow points up. From the Market, in which direction is the Harbor?",
+      "options": [
+        "West",
+        "North",
+        "East",
+        "South",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Town map (north ↑; equal spacing)\n\n            Temple\nMarket      Well       Harbor\n            Farm"
+    },
+    {
+      "id": "history-6",
+      "type": "choice",
+      "prompt": "How did farming help some communities become more settled?",
+      "options": [
+        "People no longer depended on rainfall or irrigation.",
+        "People could produce food in one area over time.",
+        "All farming communities immediately became empires.",
+        "Farming ended all need for tools.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-7",
+      "type": "choice",
+      "prompt": "Why could a reliable food surplus support specialized crafts?",
+      "options": [
+        "Some people could work at tasks other than producing food.",
+        "Every person now had to farm full-time.",
+        "The surplus removed the need to exchange goods.",
+        "Specialized workers no longer depended on food producers.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-8",
+      "type": "choice",
+      "prompt": "Between which rivers did much of ancient Mesopotamia develop?",
+      "options": [
+        "Nile and Amazon",
+        "Indus and Ganges",
+        "Yellow and Yangtze",
+        "Tigris and Euphrates",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-9",
+      "type": "choice",
+      "prompt": "Why did irrigation require cooperation?",
+      "options": [
+        "Each person used a separate river with no shared channels.",
+        "Canals needed no maintenance after construction.",
+        "Canals had to be built, maintained, and shared.",
+        "Water distribution could not affect neighboring farms.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-10",
+      "type": "choice",
+      "prompt": "What was one use of cuneiform writing?",
+      "options": [
+        "Replacing spoken language in all daily conversation",
+        "Keeping records of goods and transactions",
+        "Creating modern printed books with movable type",
+        "Drawing maps using satellite measurements",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-11",
+      "type": "choice",
+      "prompt": "Why was the Nile important to ancient Egyptian farming?",
+      "options": [
+        "Its water and flood deposits supported crops.",
+        "It kept every field equally fertile without irrigation or work.",
+        "It made overland and river travel unnecessary.",
+        "It guaranteed floods could never damage settlements.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-12",
+      "type": "choice",
+      "prompt": "Which describes a pharaoh's role?",
+      "options": [
+        "An elected assembly representing all adult residents",
+        "A Roman senator with limited provincial authority",
+        "A merchant who held no governing authority",
+        "Ruler with political and religious authority",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-13",
+      "type": "choice",
+      "prompt": "What could tools and grain-storage remains help researchers investigate?",
+      "options": [
+        "The private thoughts of every individual farmer",
+        "The exact harvest of the following year",
+        "How people farmed and stored food",
+        "The identity of every worker at the storage site",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-14",
+      "type": "choice",
+      "prompt": "Which belief is central to ancient Hebrew religious tradition?",
+      "options": [
+        "Worship of the Roman emperor",
+        "Belief in one God",
+        "Worship of many gods with equal authority",
+        "The belief that each city’s pharaoh was its only deity",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-15",
+      "type": "choice",
+      "prompt": "When using a religious text as a historical source, what should historians consider?",
+      "options": [
+        "Its context, purpose, traditions, and other evidence",
+        "Only the length of the text",
+        "Only whether it agrees with their first idea",
+        "Its religious purpose as a reason to ignore all its historical context",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-16",
+      "type": "choice",
+      "prompt": "How did Phoenician sea trade help ideas spread?",
+      "options": [
+        "Every port became isolated from other ports.",
+        "Trade made all local cultures identical immediately.",
+        "Writing practices could spread only through conquest, never trade.",
+        "Traders carried goods and writing practices between ports.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-17",
+      "type": "choice",
+      "prompt": "Why were long-distance trade routes important to African societies?",
+      "options": [
+        "They meant communities had identical local resources.",
+        "They prevented contact between distant communities.",
+        "They connected communities exchanging goods and ideas.",
+        "They eliminated local production of goods.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-18",
+      "type": "choice",
+      "prompt": "Why might people settle near reliable water in a dry region?",
+      "options": [
+        "Reliable water removes all risks to farming.",
+        "Water supports farming, animals, and daily life.",
+        "Water supplies determine every feature of a society by themselves.",
+        "Water replaces a community’s need for trade and shelter.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-19",
+      "type": "choice",
+      "prompt": "Why did Andean farmers build terraces on steep slopes?",
+      "options": [
+        "To create flatter growing areas and help manage soil and water",
+        "To make steeper slopes for planting",
+        "To prevent water from reaching crops",
+        "To replace planting with long-distance trade",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-20",
+      "type": "choice",
+      "prompt": "Which evidence could help study Maya achievements?",
+      "options": [
+        "Only a modern fictional story set in the region",
+        "An unrelated Roman inscription alone",
+        "A current travel advertisement with no historical evidence",
+        "Surviving buildings, inscriptions, and calendars",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-21",
+      "type": "choice",
+      "prompt": "A city needs workers and grain to maintain a canal. Which question concerns its economy?",
+      "options": [
+        "Which ceremonies marked the ruler’s accession?",
+        "Which symbols appeared on the city’s temples?",
+        "How will labor and food resources be organized?",
+        "What language was used in public inscriptions?",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-22",
+      "type": "choice",
+      "prompt": "The Indus civilization developed around which river system?",
+      "options": [
+        "The Nile and its tributaries",
+        "The Indus and its tributaries",
+        "The Mississippi and its tributaries",
+        "The Tiber and its tributaries",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-23",
+      "type": "choice",
+      "prompt": "Which tradition is associated with Siddhartha Gautama's teachings?",
+      "options": [
+        "Buddhism",
+        "Confucianism",
+        "Roman emperor worship",
+        "Ancient Egyptian royal religion",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-24",
+      "type": "choice",
+      "prompt": "Standardized weights found in Indus cities suggest what?",
+      "options": [
+        "Every resident had the same job.",
+        "Trade was absent from the cities.",
+        "Measurements differed completely from one trader to another.",
+        "Shared practices useful for trade",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-25",
+      "type": "choice",
+      "prompt": "Which rivers were especially important to early Chinese civilization?",
+      "options": [
+        "Nile and Tiber",
+        "Amazon and Orinoco",
+        "Yellow and Yangtze",
+        "Tigris and Euphrates",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-26",
+      "type": "choice",
+      "prompt": "Which idea is associated with Confucian teaching?",
+      "options": [
+        "Government works best when rulers ignore ethical responsibilities.",
+        "Ethical conduct and responsibilities within relationships",
+        "Public life should have no duties to family or community.",
+        "Education has no role in developing responsible conduct.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-27",
+      "type": "choice",
+      "prompt": "Standardizing writing and measures under Qin rule would most directly help what?",
+      "options": [
+        "Administration and exchange across the state",
+        "Prevent communication between regions",
+        "Guarantee all spoken dialects became identical immediately",
+        "Remove the need to transport goods between places",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-28",
+      "type": "choice",
+      "prompt": "Which describes a Greek polis?",
+      "options": [
+        "A single state ruling all Greek-speaking communities at all times",
+        "A religious festival shared by all Mediterranean peoples",
+        "A merchant ship used only for long-distance trade",
+        "A city-state with its surrounding territory",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-29",
+      "type": "choice",
+      "prompt": "Which statement accurately describes ancient Athenian democracy?",
+      "options": [
+        "Every resident, including enslaved people, could vote equally.",
+        "All laws were made by a hereditary Persian emperor.",
+        "Some male citizens participated directly, while many residents were excluded.",
+        "All political decisions were made by elected representatives exactly as in a modern republic.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-30",
+      "type": "choice",
+      "prompt": "How did mountains and islands affect ancient Greek communities?",
+      "options": [
+        "They created one continuous, easily crossed farming plain.",
+        "They contributed to separated communities and encouraged sea connections.",
+        "They made all sea travel impossible.",
+        "They prevented communities from developing local identities.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-31",
+      "type": "choice",
+      "prompt": "Rome developed on which peninsula?",
+      "options": [
+        "The Italian Peninsula",
+        "The Korean Peninsula",
+        "The Arabian Peninsula",
+        "The Yucatán Peninsula",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-32",
+      "type": "choice",
+      "prompt": "Which feature belonged to the Roman Republic?",
+      "options": [
+        "A hereditary pharaoh ruled as the sole governing institution.",
+        "Every adult resident had identical voting rights.",
+        "There were no elected public officials at any time.",
+        "Consuls and a senate played important governing roles.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-33",
+      "type": "choice",
+      "prompt": "What change is associated with Augustus?",
+      "options": [
+        "The first establishment of the Roman Republic",
+        "The final end of the Western Roman Empire",
+        "The establishment of imperial rule after the republic's civil wars",
+        "The transfer of the Roman capital to Constantinople",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-34",
+      "type": "choice",
+      "prompt": "What was a main purpose of Roman aqueducts?",
+      "options": [
+        "Defend every border as military walls",
+        "Carry water to communities",
+        "Provide roads for armies and merchants",
+        "Store grain for the entire empire",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-35",
+      "type": "choice",
+      "prompt": "Which statement about Roman society is accurate?",
+      "options": [
+        "Legal status and rights differed among citizens, noncitizens, and enslaved people.",
+        "Every resident always had the same legal status.",
+        "Enslaved people held the same political rights as citizens.",
+        "Citizenship never changed or expanded over Roman history.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-36",
+      "type": "choice",
+      "prompt": "An emperor's monument praises his victories. How should a historian use it?",
+      "options": [
+        "As proof that every claim on it is complete and unbiased",
+        "As proof that every subject agreed with the emperor",
+        "As a record that needs no comparison because it survives in stone",
+        "As evidence of how he wanted his rule presented, checked against other sources",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-37",
+      "type": "choice",
+      "prompt": "Which best explains the decline of Western Roman imperial power?",
+      "options": [
+        "One single cause unrelated to economic or political conditions",
+        "Only a change in architectural style",
+        "Interacting political, economic, military, and external pressures",
+        "Only the decision to build more roads",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-38",
+      "type": "choice",
+      "prompt": "After Western Roman imperial rule ended, what happened in the East?",
+      "options": [
+        "Both eastern and western governments ended at the same moment.",
+        "The Eastern Roman Empire continued.",
+        "The Eastern Empire returned to being the early Roman Republic.",
+        "Eastern territory was immediately governed as part of ancient classical Athens.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-39",
+      "type": "choice",
+      "prompt": "Which sequence is in the correct order?",
+      "options": [
+        "Roman Republic, early Roman Empire, end of Western imperial rule",
+        "End of Western imperial rule, Roman Republic, early Empire",
+        "Early Roman Empire, Roman Republic, end of Western imperial rule",
+        "Roman Republic, end of Western imperial rule, early Empire",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "history-40",
+      "type": "choice",
+      "prompt": "To test a claim that military costs weakened Rome, what evidence is most relevant?",
+      "options": [
+        "Only the height of surviving monuments",
+        "Only the names of Roman military units",
+        "Only an emperor’s portrait with no other information",
+        "Records of military spending, taxation, and government resources",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    }
+  ]
+}

@@ -1,0 +1,953 @@
+{
+  "student": "Brody",
+  "subject": "science",
+  "title": "Science Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "science-1",
+      "type": "choice",
+      "band": "A",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Distinguish observation from inference",
+      "ma": "MA STE practices: observations",
+      "ca": "CA NGSS practices: analyzing data",
+      "prompt": "Which is a direct observation?",
+      "options": [
+        "The liquid must contain salt.",
+        "Someone probably heated the liquid earlier.",
+        "The liquid measured 24°C.",
+        "The liquid is the best for plants.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The liquid measured 24°C.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-2",
+      "type": "choice",
+      "band": "A",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Fair comparison",
+      "ma": "MA STE practices: investigations",
+      "ca": "CA NGSS practices: investigations",
+      "prompt": "To compare two fertilizers, which plan is fairest?",
+      "options": [
+        "Give one group more light and a different fertilizer.",
+        "Use equal water, light, and plant type, changing only the fertilizer.",
+        "Use different plant species and different pots.",
+        "Measure one group after a day and the other after a month.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Use equal water, light, and plant type, changing only the fertilizer.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-3",
+      "type": "choice",
+      "band": "A",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Plants obtain matter",
+      "ma": "5-LS1-1",
+      "ca": "MS-LS1-6 prerequisite",
+      "prompt": "Where does much of the matter added as a plant grows come from?",
+      "options": [
+        "Air and water",
+        "Only minerals taken from soil",
+        "Only sunlight, treated as a source of matter",
+        "Only soil particles attached to roots",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Air and water",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-4",
+      "type": "choice",
+      "band": "A",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Conservation of matter",
+      "ma": "5-PS1-2",
+      "ca": "MS-PS1-5 prerequisite",
+      "prompt": "Ice melts in a sealed container with nothing entering or leaving. What happens to total mass?",
+      "options": [
+        "It becomes zero.",
+        "It doubles.",
+        "It decreases because liquids have no mass.",
+        "It stays the same.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: It stays the same.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-5",
+      "type": "choice",
+      "band": "A",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Earth rotation",
+      "ma": "5-ESS1-2",
+      "ca": "MS-ESS1-1 prerequisite",
+      "prompt": "What mainly causes the daily pattern of sunrise and sunset?",
+      "options": [
+        "Earth completing one orbit each day",
+        "The Moon blocking sunlight every night",
+        "Earth rotating on its axis",
+        "The Sun revolving around Earth each day",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Earth rotating on its axis",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-6",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Moon phase model",
+      "ma": "6.MS-ESS1-1a",
+      "ca": "MS-ESS1-1",
+      "prompt": "Why do we see different phases of the Moon?",
+      "options": [
+        "Earth's shadow covers the Moon every week.",
+        "We see different portions of its sunlit half as it orbits Earth.",
+        "The Moon produces different amounts of light.",
+        "Clouds remove part of the Moon each night.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: We see different portions of its sunlit half as it orbits Earth.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-7",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Relative ages",
+      "ma": "6.MS-ESS1-4",
+      "ca": "MS-ESS1-4",
+      "prompt": "In undisturbed sedimentary layers, layer A lies below B, which lies below C. Which is oldest?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "All must be the same age",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: A",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-8",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Fossil evidence",
+      "ma": "6.MS-ESS1-4",
+      "ca": "MS-ESS1-4",
+      "prompt": "The same short-lived, widespread fossil occurs in two distant rock layers. What does that support?",
+      "options": [
+        "The layers formed at exactly the same depth.",
+        "The layers must contain identical minerals.",
+        "Both layers formed in the same geographic location.",
+        "The layers formed during a similar time interval.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The layers formed during a similar time interval.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-9",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Plate motion evidence",
+      "ma": "6.MS-ESS2-3",
+      "ca": "MS-ESS2-3",
+      "prompt": "Matching fossils and rock belts occur on coastlines now separated by an ocean. What explanation fits?",
+      "options": [
+        "The same fossils prove the ocean has never changed.",
+        "The continents have remained fixed while only coastlines changed.",
+        "The landmasses were connected in the past.",
+        "Similar rocks alone prove that both coasts have the same current climate.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The landmasses were connected in the past.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-10",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Scale of systems",
+      "ma": "6.MS-ESS1-5(MA)",
+      "ca": "CA NGSS Earth and space domain",
+      "prompt": "Which correctly places our solar system?",
+      "options": [
+        "Outside the Milky Way but inside Earth’s atmosphere",
+        "Within the Milky Way galaxy, one of many galaxies",
+        "Containing all galaxies in the universe",
+        "Larger than the Milky Way galaxy",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Within the Milky Way galaxy, one of many galaxies",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-11",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Cell evidence",
+      "ma": "6.MS-LS1-1",
+      "ca": "MS-LS1-1",
+      "prompt": "A microscope shows one living organism consists of a single cell. What does this show?",
+      "options": [
+        "An organism can carry out life processes with one cell.",
+        "All organisms consist of one cell.",
+        "Only multicellular organisms perform life processes.",
+        "Cells exist only within animals.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: An organism can carry out life processes with one cell.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-12",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Cell membrane function",
+      "ma": "6.MS-LS1-2",
+      "ca": "MS-LS1-2",
+      "prompt": "Which cell structure helps control what enters and leaves the cell?",
+      "options": [
+        "Nucleus",
+        "Chloroplast",
+        "Mitochondrion",
+        "Cell membrane",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Cell membrane",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-13",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Chloroplast function",
+      "ma": "6.MS-LS1-2",
+      "ca": "MS-LS1-2",
+      "prompt": "A leaf cell has chloroplasts. What process are they especially involved in?",
+      "options": [
+        "Controlling which molecules cross the cell membrane",
+        "Storing most of the cell’s genetic instructions",
+        "Using light energy to make sugars",
+        "Releasing energy from food through cellular respiration",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Using light energy to make sugars",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-14",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Interacting body systems",
+      "ma": "6.MS-LS1-3",
+      "ca": "MS-LS1-3",
+      "prompt": "How do the respiratory and circulatory systems work together?",
+      "options": [
+        "The lungs pump blood through the body.",
+        "Oxygen enters the blood at the lungs and is carried to cells.",
+        "The heart adds oxygen directly from the air without the lungs.",
+        "The blood carries oxygen only to the lungs and never away.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Oxygen enters the blood at the lungs and is carried to cells.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-15",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Fossils and environment",
+      "ma": "6.MS-LS4-1",
+      "ca": "MS-LS4-1",
+      "prompt": "Marine fossils occur in rock now high on a mountain. What is supported?",
+      "options": [
+        "The rock formed in a marine environment before later uplift.",
+        "The organisms necessarily lived on a high mountain.",
+        "The rocks prove the ocean is still at that elevation.",
+        "Marine organisms lived only on land at that time.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: The rock formed in a marine environment before later uplift.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-16",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Anatomical evidence",
+      "ma": "6.MS-LS4-2",
+      "ca": "MS-LS4-2",
+      "prompt": "Similar arrangements of arm bones in different mammals are evidence for what?",
+      "options": [
+        "Identical diets in all mammals",
+        "Identical sizes in all mammals",
+        "No change in any species over time",
+        "Evolutionary relationships and common ancestry",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Evolutionary relationships and common ancestry",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-17",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Density calculation",
+      "ma": "6.MS-PS1-7(MA)",
+      "ca": "CA NGSS PS1.A: properties of matter",
+      "prompt": "A block has mass 24 g and volume 8 cm³. What is its density?",
+      "options": [
+        "16 g/cm³",
+        "32 g/cm³",
+        "3 g/cm³",
+        "192 g/cm³",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: 3 g/cm³",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-18",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Density reasoning",
+      "ma": "6.MS-PS1-7(MA)",
+      "ca": "CA NGSS PS1.A: properties of matter",
+      "prompt": "Two blocks have equal volume. Block P has twice the mass of Q. How do their densities compare?",
+      "options": [
+        "P has half the density of Q.",
+        "P has twice the density of Q.",
+        "Their densities must be equal.",
+        "Q has no density.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: P has twice the density of Q.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-19",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Mixture separation",
+      "ma": "6.MS-PS1-8(MA)",
+      "ca": "CA NGSS PS1.A: properties of matter",
+      "prompt": "Which method can separate iron filings from dry sand?",
+      "options": [
+        "Use a magnet.",
+        "Use a filter with openings larger than both kinds of particles.",
+        "Stir the mixture until both materials look evenly spread.",
+        "Separate by color without removing either material.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Use a magnet.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-20",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Energy change evidence",
+      "ma": "6.MS-PS1-6",
+      "ca": "MS-PS1-6",
+      "prompt": "Two substances react in an insulated cup, and the mixture warms without external heating. What does this suggest?",
+      "options": [
+        "The reaction absorbed thermal energy from the mixture.",
+        "No energy transfer occurred because the cup was insulated.",
+        "Warming alone proves the substances did not react.",
+        "The reaction releases thermal energy.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The reaction releases thermal energy.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-21",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Gravity",
+      "ma": "6.MS-PS2-4",
+      "ca": "MS-PS2-4",
+      "prompt": "Which statement describes gravitational force between two masses?",
+      "options": [
+        "It always pushes them apart.",
+        "It acts only if they touch.",
+        "It attracts them toward each other.",
+        "It acts only on objects containing iron.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: It attracts them toward each other.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-22",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Wave amplitude",
+      "ma": "6.MS-PS4-1",
+      "ca": "MS-PS4-1",
+      "prompt": "A wave's height from its resting level to a crest increases. Which property increases?",
+      "options": [
+        "Wavelength necessarily",
+        "Amplitude",
+        "Time between crests necessarily",
+        "Number of resting levels",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Amplitude",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-23",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Reflection",
+      "ma": "6.MS-PS4-2",
+      "ca": "MS-PS4-2",
+      "prompt": "Light striking a mirror bounces back. Which process is this?",
+      "options": [
+        "Reflection",
+        "Absorption only",
+        "Evaporation",
+        "Condensation",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Reflection",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-24",
+      "type": "choice",
+      "band": "B",
+      "domain": "Engineering",
+      "topic": "Engineering",
+      "skill": "Criteria and constraints",
+      "ma": "6.MS-ETS1-1",
+      "ca": "MS-ETS1-1",
+      "prompt": "A bridge must hold 2 kg and cost less than $10. Which is a constraint?",
+      "options": [
+        "The bridge’s name",
+        "The goal of making the bridge attractive",
+        "An optional decoration chosen by the designer",
+        "The budget limit of $10",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The budget limit of $10",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-25",
+      "type": "choice",
+      "band": "B",
+      "domain": "Engineering",
+      "topic": "Engineering",
+      "skill": "Interpret test data",
+      "ma": "6.MS-ETS1-1",
+      "ca": "MS-ETS1-2",
+      "prompt": "Design tests: A holds 3 kg and costs $8; B holds 1 kg and costs $6; C holds 4 kg and costs $12. Which meets BOTH a 2 kg minimum and a $10 maximum?",
+      "options": [
+        "B",
+        "C",
+        "A",
+        "All three",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: A",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-26",
+      "type": "choice",
+      "band": "B",
+      "domain": "Engineering",
+      "topic": "Engineering",
+      "skill": "Material properties",
+      "ma": "6.MS-ETS2-2(MA)",
+      "ca": "MS-ETS1-2",
+      "prompt": "A container must resist water and be lightweight. Which evidence best helps choose its material?",
+      "options": [
+        "Only the material’s color",
+        "Measured water absorption and mass of candidate materials",
+        "Only the supplier’s advertising claims",
+        "The order in which samples arrived",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Measured water absorption and mass of candidate materials",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-27",
+      "type": "choice",
+      "band": "B",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Repeat and investigate unusual data",
+      "ma": "MA STE practices: data analysis",
+      "ca": "CA NGSS practices: data analysis",
+      "prompt": "Three trials take 10 s, 11 s, and 40 s. What is the best next step?",
+      "options": [
+        "Check the procedure and repeat trials before concluding.",
+        "Delete 40 s automatically without checking.",
+        "Report only 40 s because it is largest.",
+        "Claim the experiment proves every possible outcome.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Check the procedure and repeat trials before concluding.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-28",
+      "type": "choice",
+      "band": "C",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Photosynthesis matter and energy",
+      "ma": "MA Grade 7 readiness: 7.MS-LS1-6",
+      "ca": "MS-LS1-6",
+      "prompt": "Which model correctly describes photosynthesis?",
+      "options": [
+        "Plants absorb all their sugars directly from soil.",
+        "Plants use oxygen and sugar to release energy; that is photosynthesis.",
+        "Plants convert light directly into matter without using carbon dioxide or water.",
+        "Light energy supports making sugars from carbon dioxide and water.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Light energy supports making sugars from carbon dioxide and water.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-29",
+      "type": "choice",
+      "band": "C",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Food rearrangement",
+      "ma": "MA Grade 7 readiness: 7.MS-LS1-7",
+      "ca": "MS-LS1-7",
+      "prompt": "What happens to food molecules during digestion and use by cells?",
+      "options": [
+        "They stay intact and are stored unchanged in every cell.",
+        "They leave the organism entirely without contributing to growth.",
+        "They are broken down and rearranged into molecules used for growth and energy processes.",
+        "They become minerals without any chemical reactions.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: They are broken down and rearranged into molecules used for growth and energy processes.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-30",
+      "type": "choice",
+      "band": "C",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Resource limitation",
+      "ma": "MA later-grade readiness: ecosystems",
+      "ca": "MS-LS2-1",
+      "prompt": "When available food decreases while other conditions stay similar, what may limit a population?",
+      "options": [
+        "Competition automatically disappears.",
+        "Competition for the smaller food supply",
+        "Every individual is guaranteed to reproduce more.",
+        "Population growth becomes independent of food availability.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Competition for the smaller food supply",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-31",
+      "type": "choice",
+      "band": "C",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Atoms conserved in reactions",
+      "ma": "MA Grade 8 readiness: 8.MS-PS1-5",
+      "ca": "MS-PS1-5",
+      "prompt": "In a chemical reaction in a closed system, what happens to atoms?",
+      "options": [
+        "They are rearranged but the number of each type is conserved.",
+        "Atoms are destroyed as mass decreases.",
+        "Atoms of one element all change to another element.",
+        "New atoms appear whenever temperature rises.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: They are rearranged but the number of each type is conserved.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-32",
+      "type": "choice",
+      "band": "C",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Rock cycle energy",
+      "ma": "MA Grade 7 readiness: 7.MS-ESS2-1",
+      "ca": "MS-ESS2-1",
+      "prompt": "Which process can turn sediment into sedimentary rock over time?",
+      "options": [
+        "Melting and cooling into crystals",
+        "Weathering solid rock into loose sediment",
+        "Uplift moving a rock to a higher elevation",
+        "Compaction and cementation",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Compaction and cementation",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-33",
+      "type": "choice",
+      "band": "C",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Surface change",
+      "ma": "MA Grade 7 readiness: 7.MS-ESS2-2",
+      "ca": "MS-ESS2-2",
+      "prompt": "A river gradually cuts a deeper channel. Which process best explains the change?",
+      "options": [
+        "Deposition adding material to the channel",
+        "Compaction turning sediment into rock in place",
+        "Erosion carrying material away",
+        "Cooling turning molten rock into solid rock",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Erosion carrying material away",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-34",
+      "type": "choice",
+      "band": "C",
+      "domain": "Engineering",
+      "topic": "Engineering",
+      "skill": "Evaluate ecosystem solution",
+      "ma": "MA later-grade readiness: ecosystems and design",
+      "ca": "MS-LS2-5",
+      "prompt": "Two stream-restoration plans differ in cost and habitat benefit. What is the strongest comparison?",
+      "options": [
+        "Choose only the least expensive plan regardless of habitat effects.",
+        "Evaluate both against agreed ecological goals and budget constraints.",
+        "Choose only the largest diagram without checking evidence.",
+        "Assume both plans work equally because both are called restoration.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Evaluate both against agreed ecological goals and budget constraints.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-35",
+      "type": "choice",
+      "band": "C",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Correlation and causation",
+      "ma": "MA STE practices: reasoning readiness",
+      "ca": "CA NGSS practices: analyzing data",
+      "prompt": "A pond becomes warmer while frog numbers decline. What can these observations alone establish?",
+      "options": [
+        "The changes occurred together; more evidence is needed to identify the cause.",
+        "Warmth must be the only cause.",
+        "Frog decline must be the only cause of warming.",
+        "The association proves temperature can never affect frogs.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: The changes occurred together; more evidence is needed to identify the cause.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    }
+  ]
+}

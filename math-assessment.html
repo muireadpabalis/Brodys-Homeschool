@@ -25,14 +25,14 @@
 .small-muted{font-size:.9rem;color:var(--muted)}.locked .choice{cursor:default;opacity:.9}
 @media(max-width:600px){.assess-wrap{padding:16px}.question-card{padding:16px}.assess-actions .button{width:100%}}
 </style>
-</head>
+<link rel="stylesheet" href="diagnostic.css"></head>
 <body>
 <div class="assess-wrap">
   <div class="assess-header">
     <div>
       <p class="eyebrow">One-time diagnostic</p>
       <h1>Mathematics Assessment</h1>
-      <p class="assess-note">Work carefully and choose the best answer for each question. You may go back and change any answer before you submit. There is no time limit. Use scratch paper if you want. Do not use a calculator unless an adult tells you to.</p>
+      <p class="assess-note">Choose E if you do not know or have not been taught a question. Every question needs a response. Work carefully and choose the best answer for each question. You may go back and change any answer before you submit. There is no time limit. Use scratch paper if you want. Do not use a calculator unless an adult tells you to.</p>
     </div>
     <div class="assess-progress" aria-live="polite">
       <strong id="answeredCount">0 of 68 answered</strong>
@@ -58,7 +58,7 @@
     <h2>Assessment submitted</h2>
     <p>Your responses have been saved. Please tell a parent that you are finished.</p>
     <div class="assess-actions" style="justify-content:center">
-      <button id="downloadParentBtn" class="button secondary" type="button">Download Parent Archive</button>
+      
       <a class="button" href="index.html">Return to Home School</a>
     </div>
   </div>

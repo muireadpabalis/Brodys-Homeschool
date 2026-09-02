@@ -1,0 +1,1 @@
+window.PORTAL={"student": "Brody", "grade": 7, "recordKey": "brodyHomeschoolRecordV1"};

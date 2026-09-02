@@ -1,0 +1,767 @@
+{
+  "student": "Brody",
+  "subject": "writing",
+  "title": "Writing / Language Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "writing-1",
+      "type": "choice",
+      "band": "A",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Subject-verb agreement",
+      "ma": "L.5.1",
+      "ca": "L.7.1",
+      "prompt": "Which sentence uses correct agreement?",
+      "options": [
+        "The basket of apples are on the table.",
+        "The basket of apples were on the table now.",
+        "The basket of apples is on the table.",
+        "The basket of apples be on the table.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The basket of apples is on the table.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-2",
+      "type": "choice",
+      "band": "A",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Sentence completeness",
+      "ma": "L.4.1",
+      "ca": "L.7.1",
+      "prompt": "Which is a complete sentence?",
+      "options": [
+        "Because the rain stopped.",
+        "The rain stopped before noon.",
+        "Under the old bridge.",
+        "Running toward the house.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: The rain stopped before noon.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-3",
+      "type": "choice",
+      "band": "A",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Pronoun agreement",
+      "ma": "L.5.1",
+      "ca": "L.7.1",
+      "prompt": "Choose the correct pronoun: Maya and I finished ___ project.",
+      "options": [
+        "our",
+        "her",
+        "its",
+        "his",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: our",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-4",
+      "type": "choice",
+      "band": "A",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Past tense consistency",
+      "ma": "L.5.1",
+      "ca": "L.7.1",
+      "prompt": "Choose the consistent sentence.",
+      "options": [
+        "Yesterday we walk to the lake and watched birds.",
+        "Yesterday we walked to the lake and watches birds.",
+        "Yesterday we walking to the lake and watched birds.",
+        "Yesterday we walked to the lake and watched birds.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Yesterday we walked to the lake and watched birds.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-5",
+      "type": "choice",
+      "band": "B",
+      "domain": "Sentence structure",
+      "topic": "Sentence structure",
+      "skill": "Compound sentence",
+      "ma": "L.6.1a",
+      "ca": "L.7.1b",
+      "prompt": "Which sentence correctly joins two complete thoughts?",
+      "options": [
+        "The wind rose the boat returned.",
+        "The wind rose, the boat returned.",
+        "The wind rose, and the boat returned.",
+        "The wind rose and because the boat returned.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The wind rose, and the boat returned.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-6",
+      "type": "choice",
+      "band": "B",
+      "domain": "Sentence structure",
+      "topic": "Sentence structure",
+      "skill": "Complex sentence",
+      "ma": "L.6.1a",
+      "ca": "L.7.1b",
+      "prompt": "Which sentence makes the cause clear?",
+      "options": [
+        "The bridge was closed, we another route.",
+        "Because the bridge was closed, we took another route.",
+        "We took another route the bridge closed.",
+        "The bridge because closed another route.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Because the bridge was closed, we took another route.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-7",
+      "type": "choice",
+      "band": "B",
+      "domain": "Sentence structure",
+      "topic": "Sentence structure",
+      "skill": "Phrase versus clause",
+      "ma": "L.6.1b",
+      "ca": "L.7.1a",
+      "prompt": "Which group of words contains both a subject and a verb?",
+      "options": [
+        "After the bell rang",
+        "Beside the classroom door",
+        "During the long storm",
+        "With a careful plan",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: After the bell rang",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-8",
+      "type": "choice",
+      "band": "B",
+      "domain": "Sentence structure",
+      "topic": "Sentence structure",
+      "skill": "Misplaced modifier",
+      "ma": "L.6.1c",
+      "ca": "L.7.1c",
+      "prompt": "Which sentence clearly says the cyclist wore a red helmet?",
+      "options": [
+        "The cyclist crossed the bridge wearing red bricks.",
+        "Wearing a red helmet, the bridge was crossed.",
+        "The bridge wearing a red helmet had a cyclist.",
+        "Wearing a red helmet, the cyclist crossed the bridge.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Wearing a red helmet, the cyclist crossed the bridge.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-9",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Parenthetical punctuation",
+      "ma": "L.6.2a",
+      "ca": "L.7.2",
+      "prompt": "Choose the correctly punctuated sentence.",
+      "options": [
+        "Our coach a former runner, led the warm-up.",
+        "Our coach, a former runner led the warm-up.",
+        "Our coach, a former runner, led the warm-up.",
+        "Our coach a, former runner led the warm-up.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Our coach, a former runner, led the warm-up.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-10",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Spelling and word usage",
+      "ma": "L.6.2b",
+      "ca": "L.7.2b",
+      "prompt": "Choose the word: Please put the books over ___.",
+      "options": [
+        "their",
+        "there",
+        "they're",
+        "theirs",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: there",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-11",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Possessive apostrophe",
+      "ma": "L.6.2 retained conventions",
+      "ca": "L.7.2",
+      "prompt": "Which phrase refers to the notebooks belonging to several students?",
+      "options": [
+        "the students' notebooks",
+        "the student's notebooks",
+        "the students notebook's",
+        "the student notebook's",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: the students' notebooks",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-12",
+      "type": "choice",
+      "band": "B",
+      "domain": "Revision",
+      "topic": "Revision",
+      "skill": "Remove repetition",
+      "ma": "L.6.3",
+      "ca": "L.7.3a",
+      "prompt": "Which revision is most concise without losing meaning: The final result at the end was a success?",
+      "options": [
+        "The final final result was a success at the end.",
+        "At the ending conclusion the result succeeded successfully.",
+        "The result.",
+        "The result was a success.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The result was a success.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-13",
+      "type": "choice",
+      "band": "B",
+      "domain": "Revision",
+      "topic": "Revision",
+      "skill": "Maintain formal style",
+      "ma": "W.6.2e",
+      "ca": "W.7.2e",
+      "prompt": "Which sentence best fits a formal report?",
+      "options": [
+        "This thing is super awesome, you know?",
+        "Wow, what a totally cool gizmo!",
+        "The results suggest that the new design is more efficient.",
+        "The stuff did its thing or whatever.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The results suggest that the new design is more efficient.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-14",
+      "type": "choice",
+      "band": "B",
+      "domain": "Organization",
+      "topic": "Organization",
+      "skill": "Topic sentence",
+      "ma": "W.6.2a",
+      "ca": "W.7.2a",
+      "prompt": "Which topic sentence fits details about bus routes, bike lanes, and sidewalks?",
+      "options": [
+        "The town's oldest building is a library.",
+        "The town offers several ways to travel without a car.",
+        "The town has many kinds of birds.",
+        "The town celebrated its anniversary.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: The town offers several ways to travel without a car.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-15",
+      "type": "choice",
+      "band": "B",
+      "domain": "Organization",
+      "topic": "Organization",
+      "skill": "Relevant evidence",
+      "ma": "W.6.1b",
+      "ca": "W.7.1b",
+      "prompt": "Which detail best supports a claim that a later library closing time would help students?",
+      "options": [
+        "Thirty students reported arriving after the current closing time.",
+        "The library has blue curtains.",
+        "The library opened fifty years ago.",
+        "A librarian enjoys mystery novels.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Thirty students reported arriving after the current closing time.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-16",
+      "type": "choice",
+      "band": "B",
+      "domain": "Organization",
+      "topic": "Organization",
+      "skill": "Contrast transition",
+      "ma": "W.6.1c",
+      "ca": "W.7.1c",
+      "prompt": "Choose the transition: The new design is lighter. ___, it costs more.",
+      "options": [
+        "For example",
+        "Similarly",
+        "As a result of being cheaper",
+        "However",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: However",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-17",
+      "type": "choice",
+      "band": "B",
+      "domain": "Organization",
+      "topic": "Organization",
+      "skill": "Sequence transition",
+      "ma": "W.6.2c",
+      "ca": "W.7.2c",
+      "prompt": "Which transition shows the next step in a process?",
+      "options": [
+        "In contrast, attach the lid.",
+        "Despite the lid, attach.",
+        "Next, attach the lid.",
+        "For the opposite reason, lid.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Next, attach the lid.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-18",
+      "type": "choice",
+      "band": "B",
+      "domain": "Revision",
+      "topic": "Revision",
+      "skill": "Precise language",
+      "ma": "L.6.3",
+      "ca": "L.7.3a",
+      "prompt": "Which revision most precisely describes an experiment?",
+      "options": [
+        "The thing changed a bit.",
+        "The metal rod expanded by 2 millimeters when heated.",
+        "The stuff did something odd.",
+        "It got sort of different somehow.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: The metal rod expanded by 2 millimeters when heated.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-19",
+      "type": "choice",
+      "band": "B",
+      "domain": "Research writing",
+      "topic": "Research writing",
+      "skill": "Paraphrase and credit",
+      "ma": "W.6.8",
+      "ca": "W.7.8",
+      "prompt": "How should a writer use an idea from a source?",
+      "options": [
+        "Restate it accurately in original wording and credit the source.",
+        "Copy it exactly without quotation marks or credit.",
+        "Change one word and claim the idea as original.",
+        "Invent a source that sounds scholarly.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Restate it accurately in original wording and credit the source.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-20",
+      "type": "choice",
+      "band": "B",
+      "domain": "Narrative craft",
+      "topic": "Narrative craft",
+      "skill": "Specific descriptive detail",
+      "ma": "W.6.3d",
+      "ca": "W.7.3d",
+      "prompt": "Which sentence shows nervousness through a concrete detail?",
+      "options": [
+        "I was a person in a room.",
+        "The event took place on Tuesday.",
+        "There were people near the door.",
+        "I folded the corner of my note again while waiting for my name.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: I folded the corner of my note again while waiting for my name.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-21",
+      "type": "choice",
+      "band": "C",
+      "domain": "Sentence structure",
+      "topic": "Sentence structure",
+      "skill": "Correct dangling modifier",
+      "ma": "L.7.1c readiness",
+      "ca": "L.7.1c",
+      "prompt": "Which revision clearly identifies who was walking: Walking to school, the storm surprised Eli?",
+      "options": [
+        "Walking to school, the storm surprised itself.",
+        "The storm walking to school surprised Eli.",
+        "While Eli was walking to school, the storm surprised him.",
+        "Walking to school, there was a storm.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: While Eli was walking to school, the storm surprised him.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-22",
+      "type": "choice",
+      "band": "C",
+      "domain": "Argument writing",
+      "topic": "Argument writing",
+      "skill": "Acknowledge opposing claim",
+      "ma": "W.7.1a readiness",
+      "ca": "W.7.1a",
+      "prompt": "Which sentence acknowledges an opposing view while supporting a garden?",
+      "options": [
+        "Everyone who dislikes gardens is foolish.",
+        "Although a garden requires care, shared watering shifts can make that work manageable.",
+        "Gardens have leaves and stems.",
+        "No one could possibly disagree with my plan.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Although a garden requires care, shared watering shifts can make that work manageable.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-23",
+      "type": "choice",
+      "band": "C",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Coordinate adjectives",
+      "ma": "L.7.2a readiness",
+      "ca": "L.7.2a",
+      "prompt": "Which sentence correctly punctuates the coordinate adjectives?",
+      "options": [
+        "It was a long, difficult journey.",
+        "It was a long difficult, journey.",
+        "It was, a long difficult journey.",
+        "It, was a long difficult journey.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: It was a long, difficult journey.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-24",
+      "type": "choice",
+      "band": "C",
+      "domain": "Argument writing",
+      "topic": "Argument writing",
+      "skill": "Explain evidence",
+      "ma": "W.7.1b readiness",
+      "ca": "W.7.1b",
+      "prompt": "After giving data that missed buses decreased, which sentence best connects that evidence to a schedule-change claim?",
+      "options": [
+        "The bus seats are green.",
+        "All schedules are equally effective.",
+        "Transportation is a word with many letters.",
+        "Fewer missed buses suggest the new departure time makes the service easier to use.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Fewer missed buses suggest the new departure time makes the service easier to use.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "domain": "Narrative writing",
+      "topic": "Narrative writing",
+      "skill": "Independent composition",
+      "ma": "W.6.3",
+      "ca": "W.7.3",
+      "prompt": "Write an independent narrative about a time someone had to change a plan. Develop a clear sequence, a setting, a character response, and a meaningful ending. Use dialogue or description where useful. Aim for several paragraphs; there is no required word count.",
+      "rubric": {
+        "scale": {
+          "0": "No observable evidence in this sample",
+          "1": "Emerging; limited or inconsistent evidence",
+          "2": "Developing; some effective evidence",
+          "3": "Secure evidence for this task"
+        },
+        "dimensions": [
+          "Purpose and focus",
+          "Organization and sequence",
+          "Details, reasons, or evidence",
+          "Sentence construction and vocabulary",
+          "Conventions"
+        ],
+        "guidance": "Evaluate what is actually written. A non-response is insufficient evidence, not a zero. Record assistance, dictation, typing or handwriting. Do not equate length or typing fluency with writing ability. Review genre-specific features in the prompt. Grade 6 exit: coherent development and paragraphs; handling opposing claims is a Grade 7 readiness observation, not required prior-grade mastery."
+      },
+      "id": "writing-25",
+      "type": "writing",
+      "correct": null,
+      "options": [],
+      "answerRationale": "Parent rubric review required; no binary grade.",
+      "role": "prior-grade mastery",
+      "band": "B",
+      "passage": "",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "domain": "Informational writing",
+      "topic": "Informational writing",
+      "skill": "Independent composition",
+      "ma": "W.6.2",
+      "ca": "W.7.2",
+      "prompt": "Explain a process or topic you know well to a younger reader. Introduce it clearly, organize related ideas into paragraphs, use accurate details and useful transitions, and end with a conclusion. Write from your own knowledge; no research or outside assistance.",
+      "rubric": {
+        "scale": {
+          "0": "No observable evidence in this sample",
+          "1": "Emerging; limited or inconsistent evidence",
+          "2": "Developing; some effective evidence",
+          "3": "Secure evidence for this task"
+        },
+        "dimensions": [
+          "Purpose and focus",
+          "Organization and sequence",
+          "Details, reasons, or evidence",
+          "Sentence construction and vocabulary",
+          "Conventions"
+        ],
+        "guidance": "Evaluate what is actually written. A non-response is insufficient evidence, not a zero. Record assistance, dictation, typing or handwriting. Do not equate length or typing fluency with writing ability. Review genre-specific features in the prompt. Grade 6 exit: coherent development and paragraphs; handling opposing claims is a Grade 7 readiness observation, not required prior-grade mastery."
+      },
+      "id": "writing-26",
+      "type": "writing",
+      "correct": null,
+      "options": [],
+      "answerRationale": "Parent rubric review required; no binary grade.",
+      "role": "prior-grade mastery",
+      "band": "B",
+      "passage": "",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "domain": "Opinion / argument writing",
+      "topic": "Opinion / argument writing",
+      "skill": "Independent composition",
+      "ma": "W.6.1",
+      "ca": "W.7.1",
+      "prompt": "A homeschool group can spend one weekly afternoon on either a community service project or a student-designed investigation. Argue for one choice. State a clear claim, develop reasons with concrete examples, consider a possible objection, and conclude. Write several paragraphs independently.",
+      "rubric": {
+        "scale": {
+          "0": "No observable evidence in this sample",
+          "1": "Emerging; limited or inconsistent evidence",
+          "2": "Developing; some effective evidence",
+          "3": "Secure evidence for this task"
+        },
+        "dimensions": [
+          "Purpose and focus",
+          "Organization and sequence",
+          "Details, reasons, or evidence",
+          "Sentence construction and vocabulary",
+          "Conventions"
+        ],
+        "guidance": "Evaluate what is actually written. A non-response is insufficient evidence, not a zero. Record assistance, dictation, typing or handwriting. Do not equate length or typing fluency with writing ability. Review genre-specific features in the prompt. Grade 6 exit: coherent development and paragraphs; handling opposing claims is a Grade 7 readiness observation, not required prior-grade mastery."
+      },
+      "id": "writing-27",
+      "type": "writing",
+      "correct": null,
+      "options": [],
+      "answerRationale": "Parent rubric review required; no binary grade.",
+      "role": "prior-grade mastery",
+      "band": "B",
+      "passage": "",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    }
+  ]
+}
