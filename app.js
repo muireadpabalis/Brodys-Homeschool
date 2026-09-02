@@ -12,13 +12,22 @@ assessments:[
 {id:"science",title:"Massachusetts Grade 6 Science Exit Diagnostic",subject:"Science",date:"2026-09-02",score:"",notes:"",status:"Not started",link:""},
 {id:"social",title:"Massachusetts Grade 6 Social Studies / Geography Exit Diagnostic",subject:"Social Studies",date:"2026-09-03",score:"",notes:"",status:"Not started",link:""}],
 logs:[],portfolio:[]};
-let data=localStorage.getItem(STORAGE_KEY)?JSON.parse(localStorage.getItem(STORAGE_KEY)):structuredClone(starterData);
+let data;
+try {
+  const raw=localStorage.getItem(STORAGE_KEY);
+  data=raw?JSON.parse(raw):structuredClone(starterData);
+  if(!["assignments","assessments","logs","portfolio"].every(k=>Array.isArray(data[k]))) throw new Error("Unrecognized record format");
+} catch(error) {
+  document.body.innerHTML='<main><h1>Saved records need attention</h1><p>Your existing record has been left untouched. Please ask a parent to recover or export the browser record before continuing.</p></main>';
+  throw error;
+}
 
 // Keep the one-time Math Diagnostic linked even for browsers that already saved older starter data.
 const mathAssessment=data.assessments?.find(a=>a.id==="math"); if(mathAssessment && !mathAssessment.link) mathAssessment.link="math-assessment.html";
 const mathAssignment=data.assignments?.find(a=>a.subject==="Mathematics"&&a.title.includes("Diagnostic")); if(mathAssignment && !mathAssignment.link) mathAssignment.link="math-assessment.html";
-localStorage.setItem(STORAGE_KEY,JSON.stringify(data));
-function saveData(){localStorage.setItem(STORAGE_KEY,JSON.stringify(data));renderAll()}
+persistRecord();
+function persistRecord(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(data));return true}catch(error){alert("Your changes could not be saved. Export your records now and free browser storage before continuing.");return false}}
+function saveData(){persistRecord();renderAll()}
 function esc(s=""){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function niceDate(d){if(!d)return"No date";return new Date(d+"T12:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"})}
 function setView(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.view===id));window.scrollTo({top:0,behavior:"smooth"})}
@@ -110,19 +119,23 @@ function renderSubjects(){
     detail.hidden=false;
     detail.innerHTML=`<p class="eyebrow">${esc(s.status)}</p><h2>${esc(s.name)}</h2><p>${esc(s.summary)}</p>
       <h3>Topic links</h3><ul class="topic-list">${s.topics.map(t=>`<li><a href="#assignments" class="topic-link" data-topic="${esc(t)}" data-subject="${esc(s.name)}">${esc(t)}</a></li>`).join("")}</ul>
-      <p class="privacy-note">These topic links are the instructional structure. Brody's initial baseline assessments remain Massachusetts-standards diagnostics only.</p>`;
+      <p class="privacy-note">These topic links are the instructional structure. Brody's diagnostics sample Massachusetts exit expectations and California readiness separately.</p>`;
     detail.querySelectorAll(".topic-link").forEach(a=>a.addEventListener("click",e=>{
       e.preventDefault();
       setView("assignments");
       const sf=document.getElementById("subjectFilter");
-      if([...sf.options].some(o=>o.value===s.name)) sf.value=s.name;
+      sf.value=[...sf.options].some(o=>o.value===s.name)?s.name:"all";
       renderAssignments();
     }));
     detail.scrollIntoView({behavior:"smooth",block:"start"});
   }));
 }
 
-function renderAll(){renderDashboard();renderSubjects();renderAssignments();renderAssessments();renderLogs();renderPortfolio();renderReports()}
+function syncSubjectOptions(){
+  const names=new Set([...californiaSubjects.map(s=>s.name),...data.assignments.map(a=>a.subject),...data.logs.map(l=>l.subject),...data.portfolio.map(p=>p.subject)]);
+  for(const id of ["subjectFilter","assignmentSubject","portfolioSubject","logSubject"]){const el=document.getElementById(id);for(const name of names)if(![...el.options].some(o=>o.value===name))el.add(new Option(name,name));}
+}
+function renderAll(){syncSubjectOptions();renderDashboard();renderSubjects();renderAssignments();renderAssessments();renderLogs();renderPortfolio();renderReports()}
 subjectFilter.onchange=renderAssignments;statusFilter.onchange=renderAssignments;
 const assignmentDialog=document.getElementById("assignmentDialog");addAssignmentBtn.onclick=()=>assignmentDialog.showModal();document.querySelectorAll(".close-dialog").forEach(b=>b.onclick=()=>b.closest("dialog").close());
 assignmentForm.onsubmit=e=>{e.preventDefault();data.assignments.push({id:crypto.randomUUID(),title:assignmentTitle.value.trim(),subject:assignmentSubject.value,due:assignmentDue.value,description:assignmentDescription.value.trim(),link:assignmentLink.value.trim(),complete:false,completedDate:""});e.target.reset();assignmentDialog.close();saveData()};
