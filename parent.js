@@ -80,6 +80,7 @@
  }
  function report(){const gs=groups();return {schemaVersion:1,student:cfg.student,schoolYear:'2026–2027',generatedAt:new Date().toISOString(),scope:'Local, nonstandardized diagnostic evidence. No overall percentage or placement decision.',parentContext:reviews.context||'',method:'Secure evidence requires at least three scored items and at least 80% correct in a subject/domain/band group. Threshold is a planning heuristic, not a validated cut score. E and non-exposure are never automatically remediation. Incorrect answers alone never establish instructional history or a misconception.',assessments:batteries.map(b=>({subject:b.subject,title:b.title,submittedAt:b.state?.submittedAt||null,started:!!b.state?.answers,questionCount:b.questions.length,responses:rowsFor(b)})),domains:gs,instructionalBridge:bridge(gs)};}
  function render(){
+  window.ELAParent?.render();
   const rep=report(),gs=rep.domains;
   $('parent-name').textContent=cfg.student+' — Massachusetts → California Instructional Bridge Report';
   $('context').value=reviews.context||'';$('context-print').textContent=reviews.context||'No parent context recorded.';
@@ -96,9 +97,9 @@
   const br=rep.instructionalBridge;
   $('bridge').innerHTML=`<h2>Instructional bridge</h2><p>${esc(br.knownHistory)}</p>${br.sequenceProfile.length?'<ol>'+br.sequenceProfile.map(p=>`<li><strong>${esc(p.domain)}</strong>: ${esc(p.status)} — ${esc(p.exposure)}</li>`).join('')+'</ol><p>Last secure sampled stage: '+esc(br.lastSecureSampledStage)+'</p>':''}<p>${esc(br.caution)}</p><h3>Recommended homeschool sequence</h3><ol>${br.recommendedSequence.map(s=>'<li>'+esc(s)+'</li>').join('')}</ol>`;
  }
- function backup(){const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1'))attempts[k]=get(k);}return {schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:get(cfg.recordKey),attempts,parentReview:reviews,diagnosticReport:report()};}
+ function backup(){const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1'))attempts[k]=get(k);}return {...window.ELAParent?.backup(),schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:get(cfg.recordKey),attempts,parentReview:reviews,diagnosticReport:report()};}
  $('context').onchange=()=>{reviews.context=$('context').value;saveReviews();};
- $('export-report').onclick=()=>download(prefix+'-instructional-bridge.json',JSON.stringify(report(),null,2));
+ $('export-report').onclick=()=>download(prefix+'-instructional-bridge.json',JSON.stringify({...report(),elaWritingBridge:window.ELAParent?.backup()},null,2));
  $('export-all').onclick=()=>download(prefix+'-complete-homeschool-record.json',JSON.stringify(backup(),null,2));
  $('export-items').onclick=()=>{const fields=['student','assessment','questionNumber','domain','topic','skill','question','passage','studentResponse','responseText','correctAnswer','classification','exposureResponse','maExpectation','californiaStandardOrDomain','diagnosticBand','role'];const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';download(prefix+'-diagnostic-items.csv',[fields.map(quote).join(','),...batteries.flatMap(rowsFor).map(r=>fields.map(k=>quote(r[k])).join(','))].join('\r\n'),'text/csv');};
  $('print-parent').onclick=()=>{render();window.print();};
@@ -106,7 +107,11 @@
  $('refresh-parent').onclick=()=>load().catch(e=>alert(e.message));
  $('restore-file').onchange=async e=>{try{
   const file=e.target.files[0];if(!file)return;const imported=JSON.parse(await file.text());
-  if(imported.schemaVersion!==2||imported.student!==cfg.student||!imported.record||!['assignments','assessments','logs','portfolio'].every(k=>Array.isArray(imported.record[k])))throw new Error('Choose a complete export for '+cfg.student+'.');
+  if(imported.schemaVersion===1&&imported.student===cfg.student&&imported.elaEvidence){
+   if(!confirm('Merge this ELA work export? Existing work takes precedence, and missing checkpoints are added. A backup will download first.'))return;
+   download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));window.ELAParent.restore(imported);await load();alert('Backup merged. ELA work and checkpoints were preserved.');return;
+  }
+  if(imported.schemaVersion!==2||imported.student!==cfg.student||!imported.record||!['assignments','assessments','logs','portfolio'].every(k=>Array.isArray(imported.record[k])))throw new Error('Choose a complete record or ELA work export for '+cfg.student+'.');
   if(!confirm('Merge '+imported.student+'’s backup ('+imported.record.logs.length+' logs, '+imported.record.portfolio.length+' work samples)? Existing records and attempts take precedence when IDs match. A backup will download first.'))return;
   download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));
   const current=get(cfg.recordKey)||imported.record;
@@ -114,8 +119,10 @@
   localStorage.setItem(cfg.recordKey,JSON.stringify(current));
   const allowed=[...subjects.map(s=>prefix+'Baseline2026_'+s),cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1'];
   for(const [k,v] of Object.entries(imported.attempts||{}))if(allowed.includes(k)&&localStorage.getItem(k)===null&&v&&typeof v.answers==='object')localStorage.setItem(k,JSON.stringify(v));
+  window.ELAParent?.restore(imported);
   if(!localStorage.getItem(reviewKey)&&imported.parentReview)localStorage.setItem(reviewKey,JSON.stringify(imported.parentReview));await load();alert('Backup merged. Existing records and attempts were preserved.');
  }catch(error){alert('Restore needs attention: '+error.message);}finally{e.target.value='';}};
- window.addEventListener('beforeprint',()=>{if(loaded)render();});
+ window.addEventListener('beforeprint',()=>{if(loaded){render();document.querySelectorAll('#ela-parent details').forEach(d=>d.open=true);}});
+ window.addEventListener('afterprint',()=>{if(loaded)render();});
  gate();
 })();
