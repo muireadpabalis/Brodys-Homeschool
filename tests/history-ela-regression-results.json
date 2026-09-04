@@ -1,0 +1,16 @@
+{
+  "testedAt": "2026-09-04T01:13:19.654Z",
+  "assignments": 39,
+  "results": [
+    "39 stable assignments, correct week filters, repeated migration and legacy records preserved",
+    "Outline prerequisite and unreleased final task are enforced",
+    "Every teaching assignment opens; all text fields, organizers, checklists and separate draft checkpoints survive reload",
+    "No parent content rendered or answer-key payload requested before parent unlock",
+    "Parent gate, new-prompt confirmation, separate quality rubric, assistance and comments persist",
+    "Final prompt has no supplied ideas or starters; four blank stages save independently; student export excludes parent metadata",
+    "All 39 assignments complete through saved evidence; portfolio and original baseline/log/sample preserved",
+    "Complete backup exports and restores drafts, organizers, checkpoints, final prompt and private parent review to a fresh browser",
+    "Mobile layout fits; storage failures are visible and preserve previously saved responses",
+    "No JavaScript errors during the complete workflow"
+  ]
+}

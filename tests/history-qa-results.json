@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "groups": [
+    "26 additive History assignments, seven fixed weeks, ELA filter interoperability, reload without duplicates",
+    "All 26 lesson pages render with instruction, video slots, varied tasks, sources, and no parent or diagnostic-key requests",
+    "Required evidence, honest help selection, autosave/resume, immutable demonstration checkpoint, mobile layout, student-only work export",
+    "Existing parent gate protects guides; Sean records teaching and help; confirmation and ten-section summary use actual evidence without grades",
+    "Complete record, History JSON, CSV, portfolio evidence, dated teaching log, and ELA preservation",
+    "Conservative restore keeps current work and diagnostics, adds missing snapshots, rejects unknown lessons before writes",
+    "Printable ten-section summary, no runtime errors, and corrupt History records preserved"
+  ],
+  "date": "2026-09-04T01:08:27.786Z",
+  "syntheticOnly": true
+}

@@ -1,0 +1,61 @@
+const {chromium}=require('playwright');
+const fs=require('fs'),path=require('path'),assert=require('assert');
+const root=process.env.HISTORY_QA_OUT||__dirname,base=process.env.HISTORY_QA_URL||'http://127.0.0.1:8765/Brodys-Homeschool/';
+const results=[],pass=x=>{results.push(x);console.log('PASS '+x)};
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+ try{
+ const ctx=await browser.newContext({acceptDownloads:true}),page=await ctx.newPage(),errors=[],requests=[],dialogs=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));page.on('dialog',async d=>{dialogs.push(d.message());await d.accept().catch(()=>{});});
+ await page.goto(base);await page.waitForSelector('#historyWeekFilter',{state:'attached'});
+ const course=await page.evaluate(()=>HISTORY_COURSE),counts=[4,4,3,3,3,5,4];
+ assert.equal(course.weeks.length,7);assert.equal(course.weeks.flatMap(w=>w.sessions).length,26);
+ await page.evaluate(()=>{const r=JSON.parse(localStorage.getItem(PORTAL.recordKey));r.logs.push({id:'history-qa-existing',date:'2026-09-01',subject:'Science',minutes:19,activity:'Existing record',notes:'Keep unchanged'});localStorage.setItem(PORTAL.recordKey,JSON.stringify(r));localStorage.setItem('brodyBaseline2026_history',JSON.stringify({submittedAt:'2026-09-02T12:00:00Z',answers:{qa:{choice:4}}}));localStorage.setItem('brodyMathDiagnosticV1',JSON.stringify({submitted:true,answers:{q1:0}}));localStorage.setItem('brodyELABridge2026_ela7-w1-1',JSON.stringify({schemaVersion:1,fields:{brainstorm:'Existing ELA ideas'},checks:{},snapshots:[],updatedAt:'2026-09-01T12:00:00Z'}));});
+ const initial=await page.evaluate(()=>({history:localStorage.getItem('brodyBaseline2026_history'),math:localStorage.getItem('brodyMathDiagnosticV1'),ela:localStorage.getItem('brodyELABridge2026_ela7-w1-1')}));
+ await page.reload();await page.reload();await page.getByRole('button',{name:'Assignments',exact:true}).click();
+ assert.equal(await page.locator('[data-history-id]').count(),26);
+ for(let i=1;i<=7;i++){await page.locator('#historyWeekFilter').selectOption(String(i));assert.equal(await page.locator('[data-history-id]').count(),counts[i-1]);}
+ await page.locator('#historyWeekFilter').selectOption('all');await page.locator('#subjectFilter').selectOption('English Language Arts');await page.locator('#elaWeekFilter').selectOption('3');assert(await page.locator('[data-ela-id]').count()>0);assert.equal(await page.locator('[data-history-id]').count(),0);
+ await page.locator('#subjectFilter').selectOption('History–Social Science');assert.equal(await page.locator('[data-history-id]').count(),26);
+ pass('26 additive History assignments, seven fixed weeks, ELA filter interoperability, reload without duplicates');
+ requests.length=0;
+ for(const w of course.weeks){assert(w.standards.length>0);for(const s of w.sessions){assert(s.video.listenFor.length>=2&&s.video.listenFor.length<=3);assert.equal(s.activities.length,4);assert(s.learn.length>=3);await page.goto(base+'history-bridge.html?id='+s.id);await page.waitForSelector('#history-save-checkpoint');assert.equal(await page.locator('#history-error').isVisible(),false);assert.equal(await page.locator('[data-history-field="demonstrate"]').count(),1);}}
+ assert(!requests.some(x=>x.includes('.parent.json')));assert(!JSON.stringify(course).includes('Sampled strengths'));
+ pass('All 26 lesson pages render with instruction, video slots, varied tasks, sources, and no parent or diagnostic-key requests');
+ await page.goto(base+'history-bridge.html?id=hb-w1-s1');await page.locator('#history-save-checkpoint').click();assert(await page.locator('#history-error').isVisible());
+ await page.locator('[data-history-field="demonstrate"]').fill('A fresh synthetic timeline explanation with a primary artifact and a stated limit.');
+ await page.locator('[data-history-field="responseMode"]').selectOption('Timeline / event sequence');await page.locator('[data-history-field="assistance"]').selectOption({index:1});
+ await page.locator('#history-save-checkpoint').click();assert((await page.locator('#history-save-status').innerText()).includes('checkpoint saved'));
+ await page.locator('[data-history-field="demonstrate"]').fill('Revision after discussion.');await page.reload();assert.equal(await page.locator('[data-history-field="demonstrate"]').inputValue(),'Revision after discussion.');
+ const snap=await page.evaluate(()=>HistoryStore.work('hb-w1-s1'));assert.equal(snap.snapshots.length,1);assert(snap.snapshots[0].fields.demonstrate.includes('fresh synthetic'));
+ await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:path.join(root,'history-mobile.png'),fullPage:true});await page.setViewportSize({width:1440,height:1000});
+ const studentDownloadP=page.waitForEvent('download');await page.locator('#history-export-work').click();const studentExport=JSON.parse(fs.readFileSync(await (await studentDownloadP).path(),'utf8'));assert(studentExport.historyBridge.lessonRecords['hb-w1-s1']);assert(!studentExport.historyBridge.parentReview);assert(!studentExport.attempts);
+ pass('Required evidence, honest help selection, autosave/resume, immutable demonstration checkpoint, mobile layout, student-only work export');
+ await page.goto(base+'parent.html');await page.waitForSelector('#unlock');assert(await page.locator('#gate').isVisible());assert(!requests.some(x=>x.includes('history-guide.parent.json')));
+ await page.locator('#parent-pass').fill('SyntheticOnly123');await page.locator('#confirm-pass').fill('SyntheticOnly123');await page.locator('#unlock button').click();await page.waitForSelector('[data-history-week="1"]');
+ await page.locator('[data-history-week="1"] > summary').click();
+ const lesson=page.locator('form[data-history-review="hb-w1-s1"]');await lesson.locator('..').locator('summary').first().click();
+ await lesson.locator('[name="date"]').fill('2026-09-03');await lesson.locator('[name="minutes"]').fill('35');await lesson.locator('[name="taught"]').fill('Sean modeled source comparison and clarified the BCE boundary.');await lesson.locator('[name="reviewed"]').fill('Timeline use and the evidence desk.');await lesson.locator('[name="independent"]').fill('Brody independently explained a new timeline and limited an inference.');await lesson.locator('[name="assistance"]').selectOption('Guided discussion / some modeling');await lesson.locator('[name="status"]').selectOption('Demonstrated independently');await lesson.locator('button[type="submit"]').click();assert((await lesson.locator('[role="status"]').innerText()).includes('NOT SAVED'));
+ await lesson.locator('[name="assistance"]').selectOption('Independent');await lesson.locator('button[type="submit"]').click();assert((await lesson.locator('[role="status"]').innerText()).startsWith('Saved.'));
+ const weekly=page.locator('[data-history-week-review="w1-c0"]');await weekly.locator('[name="status"]').selectOption('Confirmed');await weekly.locator('[name="evidence"]').fill('2026-09-03 fresh timeline: coherent order, no prompting.');await weekly.locator('[name="assistance"]').selectOption('Independent');await weekly.locator('button').click();
+ await page.locator('#refresh-parent').click();await page.waitForSelector('#history-summary');assert((await page.locator('#history-summary').innerText()).includes('fresh timeline'));assert.equal(await page.locator('.history-summary-section').count(),10);
+ assert(!await page.locator('#history-summary').innerText().then(t=>/\d\s*%/.test(t)));
+ pass('Existing parent gate protects guides; Sean records teaching and help; confirmation and ten-section summary use actual evidence without grades');
+ const fullP=page.waitForEvent('download');await page.locator('#export-all').click();const full=JSON.parse(fs.readFileSync(await (await fullP).path(),'utf8'));
+ assert(full.historyBridge.lessonRecords['hb-w1-s1']);assert(full.historyBridge.parentReview.lessons['hb-w1-s1']);assert(full.elaEvidence);assert(full.record.logs.some(l=>l.id==='history-qa-existing'));assert(full.record.logs.some(l=>l.id==='history-log-hb-w1-s1-2026-09-03'));assert(full.record.portfolio.some(p=>p.id==='hb-w1-s1'));
+ const csvP=page.waitForEvent('download');await page.locator('#history-export-csv').click();const csv=fs.readFileSync(await (await csvP).path(),'utf8');assert(csv.includes('diagnosticComparison'));assert(csv.includes('Sean modeled'));
+ const exportP=page.waitForEvent('download');await page.locator('#history-export-parent').click();const exported=JSON.parse(fs.readFileSync(await (await exportP).path(),'utf8'));assert.equal(exported.historySummary.sections.length,10);assert.equal(exported.curriculum.weeks.length,7);
+ pass('Complete record, History JSON, CSV, portfolio evidence, dated teaching log, and ELA preservation');
+ const merge=structuredClone(exported);merge.historyBridge.lessonRecords['hb-w1-s1'].fields.demonstrate='Do not overwrite existing work';merge.historyBridge.lessonRecords['hb-w1-s1'].snapshots.push({id:'imported-extra',at:'2026-09-02T12:00:00Z',fields:{demonstrate:'Imported earlier independent attempt'}});
+ await page.locator('#restore-file').setInputFiles({name:'history-merge.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(merge))});await page.waitForFunction(()=>HistoryStore.work('hb-w1-s1').snapshots.length===2);assert.equal(await page.evaluate(()=>HistoryStore.work('hb-w1-s1').fields.demonstrate),'Revision after discussion.');
+ const invalid=structuredClone(exported);invalid.historyBridge.lessonRecords['unknown-lesson']=invalid.historyBridge.lessonRecords['hb-w1-s1'];const before=await page.evaluate(()=>localStorage.getItem('brodyHistoryBridge2026_hb-w1-s1'));const invalidDialog=page.waitForEvent('dialog',d=>d.message().includes('Unknown History lesson'));await page.locator('#restore-file').setInputFiles({name:'bad-history.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(invalid))});await invalidDialog;assert.equal(await page.evaluate(()=>localStorage.getItem('brodyHistoryBridge2026_hb-w1-s1')),before);assert(dialogs.some(t=>t.includes('Unknown History lesson')));
+ const after=await page.evaluate(()=>({history:localStorage.getItem('brodyBaseline2026_history'),math:localStorage.getItem('brodyMathDiagnosticV1'),ela:localStorage.getItem('brodyELABridge2026_ela7-w1-1')}));assert.deepEqual(after,initial);
+ pass('Conservative restore keeps current work and diagnostics, adds missing snapshots, rejects unknown lessons before writes');
+ await page.evaluate(()=>document.body.classList.add('history-summary-print'));await page.emulateMedia({media:'print'});await page.pdf({path:path.join(root,'history-summary-qa.pdf'),format:'A4',printBackground:true});await page.emulateMedia({media:'screen'});await page.evaluate(()=>document.body.classList.remove('history-summary-print'));
+ await page.screenshot({path:path.join(root,'history-parent.png'),fullPage:true});
+ assert.deepEqual(errors,[]);
+ const ctx2=await browser.newContext(),p2=await ctx2.newPage();await p2.goto(base+'history-bridge.html?id=hb-w1-s1');await p2.evaluate(()=>localStorage.setItem('brodyHistoryBridge2026_hb-w1-s1','{unreadable'));await p2.reload();assert(await p2.locator('#history-error').isVisible());assert.equal(await p2.evaluate(()=>localStorage.getItem('brodyHistoryBridge2026_hb-w1-s1')),'{unreadable');await ctx2.close();
+ pass('Printable ten-section summary, no runtime errors, and corrupt History records preserved');
+ await ctx.close();fs.writeFileSync(path.join(root,'history-qa-results.json'),JSON.stringify({passed:true,groups:results,date:new Date().toISOString(),syntheticOnly:true},null,2));
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exit(1)});

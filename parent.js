@@ -38,7 +38,7 @@
   const all=await Promise.all(subjects.map(async subject=>({...(await fetchJSON('assessments/'+subject+'.parent.json')),state:get(prefix+'Baseline2026_'+subject)})));
   batteries=all;
   const mathState=get(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1');
-  batteries.unshift(mathBattery(await fetchJSON('parent-math.json'),mathState||{}));loaded=true;render();
+  batteries.unshift(mathBattery(await fetchJSON('parent-math.json'),mathState||{}));try{await window.HistoryParent?.load();}catch(error){window.HistoryParent?.unavailable(error);}loaded=true;render();
  }
  function answer(b,q){
   const a=b.state?.answers?.[q.id];
@@ -76,11 +76,12 @@
   const sequence=['Mesopotamia','Ancient Egypt','Ancient Israel / Hebrews','Ancient India','Ancient China','Ancient Greece','Ancient Rome','Fall of Rome'];
   const profile=sequence.map(domain=>{const g=gs.find(g=>g.subject==='history'&&g.domain===domain);return {domain,status:g?.status||'No submitted evidence',exposure:g?.exposure|| (domain==='Ancient Rome'?'Parent reports not yet studied':'unconfirmed'),correct:g?.correct??null,total:g?.rows.length??0};});
   const secure=profile.filter(p=>/secure/i.test(p.status));
-  return {knownHistory:cfg.student==='Brody'?'Parent reports no Rome instruction; California destination class is beginning the Fall of Rome. Other prior exposure remains unconfirmed.':'Completed Massachusetts Grade 2; specific instructional exposure remains to be confirmed.',sequenceProfile:cfg.student==='Brody'?profile:[],lastSecureSampledStage:secure.at(-1)?.domain||'Not established',caution:'A later correct answer does not establish mastery of every earlier stage. These are brief, nonstandardized probes; corroborate with school records and work samples.',recommendedSequence:cfg.student==='Brody'?['Confirm foundations and prior coverage using the sequence profile.','Ancient Rome foundations and geography','Roman Republic and institutions','Roman Empire and major political/social developments','Decline and fall of the Western Roman Empire; Eastern continuity','Continue the destination school’s Grade 7 sequence.']:['Confirm prerequisite gaps with work samples.','Teach or reinforce the identified subject skills.','Study the actual destination community’s geography, Indigenous peoples, local history, government, and economy.']};
+  return {knownHistory:cfg.student==='Brody'?'Parent reports no Rome instruction; California destination class is beginning the Fall of Rome. Other prior exposure remains unconfirmed.':'Completed Massachusetts Grade 2; specific instructional exposure remains to be confirmed.',sequenceProfile:cfg.student==='Brody'?profile:[],lastSecureSampledStage:secure.at(-1)?.domain||'Not established',caution:'A later correct answer does not establish mastery of every earlier stage. These are brief, nonstandardized probes; corroborate with school records and work samples.',recommendedSequence:cfg.student==='Brody'?window.HISTORY_COURSE.weeks.map(w=>'Week '+w.number+': '+w.title+' — '+w.phase):['Confirm prerequisite gaps with work samples.','Teach or reinforce the identified subject skills.','Study the actual destination community’s geography, Indigenous peoples, local history, government, and economy.']};
  }
  function report(){const gs=groups();return {schemaVersion:1,student:cfg.student,schoolYear:'2026–2027',generatedAt:new Date().toISOString(),scope:'Local, nonstandardized diagnostic evidence. No overall percentage or placement decision.',parentContext:reviews.context||'',method:'Secure evidence requires at least three scored items and at least 80% correct in a subject/domain/band group. Threshold is a planning heuristic, not a validated cut score. E and non-exposure are never automatically remediation. Incorrect answers alone never establish instructional history or a misconception.',assessments:batteries.map(b=>({subject:b.subject,title:b.title,submittedAt:b.state?.submittedAt||null,started:!!b.state?.answers,questionCount:b.questions.length,responses:rowsFor(b)})),domains:gs,instructionalBridge:bridge(gs)};}
  function render(){
   window.ELAParent?.render();
+  window.HistoryParent?.render();
   const rep=report(),gs=rep.domains;
   $('parent-name').textContent=cfg.student+' — Massachusetts → California Instructional Bridge Report';
   $('context').value=reviews.context||'';$('context-print').textContent=reviews.context||'No parent context recorded.';
@@ -97,9 +98,9 @@
   const br=rep.instructionalBridge;
   $('bridge').innerHTML=`<h2>Instructional bridge</h2><p>${esc(br.knownHistory)}</p>${br.sequenceProfile.length?'<ol>'+br.sequenceProfile.map(p=>`<li><strong>${esc(p.domain)}</strong>: ${esc(p.status)} — ${esc(p.exposure)}</li>`).join('')+'</ol><p>Last secure sampled stage: '+esc(br.lastSecureSampledStage)+'</p>':''}<p>${esc(br.caution)}</p><h3>Recommended homeschool sequence</h3><ol>${br.recommendedSequence.map(s=>'<li>'+esc(s)+'</li>').join('')}</ol>`;
  }
- function backup(){const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1'))attempts[k]=get(k);}return {...window.ELAParent?.backup(),schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:get(cfg.recordKey),attempts,parentReview:reviews,diagnosticReport:report()};}
+ function backup(){const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1'))attempts[k]=get(k);}return {...window.ELAParent?.backup(),...window.HistoryParent?.backup(),schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:get(cfg.recordKey),attempts,parentReview:reviews,diagnosticReport:report()};}
  $('context').onchange=()=>{reviews.context=$('context').value;saveReviews();};
- $('export-report').onclick=()=>download(prefix+'-instructional-bridge.json',JSON.stringify({...report(),elaWritingBridge:window.ELAParent?.backup()},null,2));
+ $('export-report').onclick=()=>download(prefix+'-instructional-bridge.json',JSON.stringify({...report(),elaWritingBridge:window.ELAParent?.backup(),historyTeachingBridge:window.HistoryParent?.backup()},null,2));
  $('export-all').onclick=()=>download(prefix+'-complete-homeschool-record.json',JSON.stringify(backup(),null,2));
  $('export-items').onclick=()=>{const fields=['student','assessment','questionNumber','domain','topic','skill','question','passage','studentResponse','responseText','correctAnswer','classification','exposureResponse','maExpectation','californiaStandardOrDomain','diagnosticBand','role'];const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';download(prefix+'-diagnostic-items.csv',[fields.map(quote).join(','),...batteries.flatMap(rowsFor).map(r=>fields.map(k=>quote(r[k])).join(','))].join('\r\n'),'text/csv');};
  $('print-parent').onclick=()=>{render();window.print();};
@@ -107,11 +108,18 @@
  $('refresh-parent').onclick=()=>load().catch(e=>alert(e.message));
  $('restore-file').onchange=async e=>{try{
   const file=e.target.files[0];if(!file)return;const imported=JSON.parse(await file.text());
+  if(imported.kind==='history-bridge'&&imported.schemaVersion===1&&imported.student===cfg.student&&imported.historyBridge){
+   window.HistoryParent.validateImport(imported);
+   if(!confirm('Merge this History bridge export? Existing work and parent observations take precedence. Missing checkpoints are added. A complete backup downloads first.'))return;
+   download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));window.HistoryParent.restore(imported);await load();alert('History bridge work merged. Existing records were preserved.');return;
+  }
   if(imported.schemaVersion===1&&imported.student===cfg.student&&imported.elaEvidence){
+
    if(!confirm('Merge this ELA work export? Existing work takes precedence, and missing checkpoints are added. A backup will download first.'))return;
    download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));window.ELAParent.restore(imported);await load();alert('Backup merged. ELA work and checkpoints were preserved.');return;
   }
   if(imported.schemaVersion!==2||imported.student!==cfg.student||!imported.record||!['assignments','assessments','logs','portfolio'].every(k=>Array.isArray(imported.record[k])))throw new Error('Choose a complete record or ELA work export for '+cfg.student+'.');
+  window.HistoryParent?.validateImport(imported);
   if(!confirm('Merge '+imported.student+'’s backup ('+imported.record.logs.length+' logs, '+imported.record.portfolio.length+' work samples)? Existing records and attempts take precedence when IDs match. A backup will download first.'))return;
   download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));
   const current=get(cfg.recordKey)||imported.record;
@@ -120,6 +128,7 @@
   const allowed=[...subjects.map(s=>prefix+'Baseline2026_'+s),cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1'];
   for(const [k,v] of Object.entries(imported.attempts||{}))if(allowed.includes(k)&&localStorage.getItem(k)===null&&v&&typeof v.answers==='object')localStorage.setItem(k,JSON.stringify(v));
   window.ELAParent?.restore(imported);
+  window.HistoryParent?.restore(imported);
   if(!localStorage.getItem(reviewKey)&&imported.parentReview)localStorage.setItem(reviewKey,JSON.stringify(imported.parentReview));await load();alert('Backup merged. Existing records and attempts were preserved.');
  }catch(error){alert('Restore needs attention: '+error.message);}finally{e.target.value='';}};
  window.addEventListener('beforeprint',()=>{if(loaded){render();document.querySelectorAll('#ela-parent details').forEach(d=>d.open=true);}});
