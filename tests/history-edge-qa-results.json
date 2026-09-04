@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "groups": [
+    "Malformed completed records are rejected before storage mutation",
+    "Restore orders checkpoints by date and merges teaching observations without replacing current findings",
+    "Editing two parent forms, saving one, and refreshing preserves the other draft without treating it as taught",
+    "Teaching CSV excludes drafts; print refreshes saved summary notes and keeps note editing functional",
+    "A stale tab cannot overwrite newer History work"
+  ],
+  "date": "2026-09-04T01:15:57.341Z",
+  "syntheticOnly": true
+}
