@@ -1,6 +1,6 @@
 /* Additive integrations. Existing school-record storage keys and record IDs stay intact. */
 (() => {
- const cfg=window.PORTAL,prefix=cfg.student.toLowerCase();
+ const cfg=window.PORTAL,P=window.AssessmentPersistence,prefix=cfg.student.toLowerCase();
  const specs=[['ela','reading','ELA / Reading','English Language Arts'],['writing','writing','Writing / Language','English Language Arts'],['science','science','Science','Science'],['social','history','History–Social Science / Geography',cfg.student==='Brody'?'Social Studies':'History–Social Science']];
  let changed=false;
  for(const [id,subject,title,course] of specs){
@@ -14,16 +14,17 @@
   if(!task){task={id:'baseline2026-'+subject,title:title+' Baseline',subject:course,due:'',description:'Diagnostic baseline with separate readiness probes. Breaks are welcome.',link,complete:false,completedDate:'',diagnosticId:subject};data.assignments.push(task);changed=true;}
   if(!task.link){task.link=link;changed=true;}
   if(!task.diagnosticId){task.diagnosticId=subject;changed=true;}
-  try{const attempt=JSON.parse(localStorage.getItem(prefix+'Baseline2026_'+subject)||'null');if(attempt){const status=attempt.submittedAt?'Complete':'In progress';if(a.status!==status){a.status=status;changed=true;}if(attempt.submittedAt){a.score='Parent report available';task.complete=true;task.completedDate=attempt.submittedAt.slice(0,10);changed=true;}}}catch(e){}
+  try{const key=prefix+'Baseline2026_'+subject,attempt=P?P.read(key):JSON.parse(localStorage.getItem(key)||'null');if(attempt){const status=attempt.submittedAt?'Complete':'In progress';if(a.status!==status){a.status=status;changed=true;}if(attempt.submittedAt){a.score='Parent report available';task.complete=true;task.completedDate=attempt.submittedAt.slice(0,10);changed=true;}}}catch(e){}
  }
- try{const m=JSON.parse(localStorage.getItem(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1')||'null');if(m){const a=data.assessments.find(a=>a.id==='math');if(a){const status=m.submittedAt||m.submitted?'Complete':'In progress';if(a.status!==status){a.status=status;changed=true;}}}}catch(e){}
+ try{const key=cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1',m=P?P.read(key):JSON.parse(localStorage.getItem(key)||'null');if(m){const a=data.assessments.find(a=>a.id==='math'),submitted=!!(m.submittedAt||m.submitted);if(a){const status=submitted?'Complete':'In progress';if(a.status!==status){a.status=status;changed=true;}if(submitted&&a.score!=='Parent report available'){a.score='Parent report available';changed=true;}}const task=data.assignments.find(x=>!x.instructionCourse&&x.subject==='Mathematics'&&/Diagnostic|Baseline/.test(x.title));if(submitted&&task&&!task.complete){task.complete=true;if(m.submittedAt)task.completedDate=m.submittedAt.slice(0,10);changed=true;}}}catch(e){}
  if(changed)saveData();else renderAll();
  const panel=document.createElement('article');panel.className='panel';panel.innerHTML='<h3>Parent diagnostics & instructional bridge</h3><p>Review domain findings, writing samples, prior-instruction evidence, and California transition priorities.</p><a class="button" href="parent.html">Open parent reports</a>';
  document.querySelector('#reports .report-grid').append(panel);
  const fullBackup=()=>{
   const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1')){try{attempts[k]=JSON.parse(localStorage.getItem(k));}catch(e){attempts[k]={unparsedRaw:localStorage.getItem(k)};}}}
   let parentReview=null;try{parentReview=JSON.parse(localStorage.getItem(prefix+'ParentReview2026')||'null')}catch(e){}
-  return {schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:data,attempts,parentReview};
+  const instructionCourses=Object.fromEntries(Object.values(window.InstructionRegistry||{}).map(store=>[store.course.id,store.backup(true)]));
+  return {schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:data,attempts,parentReview,assessmentRecovery:P?.exportArchive()||null,instructionCourses};
  };
  exportJsonBtn.onclick=()=>download(prefix+'-complete-homeschool-record.json',JSON.stringify(fullBackup(),null,2),'application/json');
  window.addEventListener('storage',e=>{if(e.key===cfg.recordKey||e.key?.startsWith(prefix+'Baseline2026_'))location.reload();});

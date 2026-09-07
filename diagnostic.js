@@ -1,17 +1,17 @@
 /* Student runtime: consumes only prompts, passages and choices, never scoring metadata. */
 (() => {
  'use strict';
- const cfg=window.PORTAL, subject=new URLSearchParams(location.search).get('subject');
+ const cfg=window.PORTAL,P=window.AssessmentPersistence,subject=new URLSearchParams(location.search).get('subject');
  const main=document.getElementById('diagnostic');
  const allowed=['reading','writing','science','history'];
  const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const key=cfg.student.toLowerCase()+'Baseline2026_'+subject;
  let assessment,state;
- function read(){const raw=localStorage.getItem(key);return raw?JSON.parse(raw):null;}
+ function read(){return P?P.read(key):(()=>{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):null;})();}
  function complete(q){const a=state.answers[q.id];return q.type==='choice'?Number.isInteger(a?.choice)&&a.choice>=0&&a.choice<=4:!!(a?.text?.trim()||a?.unknown);}
  function persist(){
   try{const current=read();if(current?.submittedAt){state=current;render();return false;}
-   localStorage.setItem(key,JSON.stringify(state));document.getElementById('save-status').textContent='Saved in this browser.';return true;
+   state=P?P.write(key,state):(localStorage.setItem(key,JSON.stringify(state)),state);const recovery=P?.status?.();document.getElementById('save-status').textContent=recovery&&!recovery.recoverySaved?'Saved in this browser. Parent recovery copy needs attention.':'Saved in this browser with a recovery copy.';return true;
   }catch(error){document.getElementById('save-status').textContent='Not saved. Keep this page open and ask a parent to free browser storage.';return false;}
  }
  function shell(){main.innerHTML=`<p class="eyebrow">${escape(cfg.student)} · Baseline</p><h1>${escape(assessment.title)}</h1>
@@ -40,6 +40,13 @@
  }
  function updateCount(){document.getElementById('progress').textContent=`Question ${state.index+1} of ${assessment.questions.length} · ${assessment.questions.filter(complete).length} answered`;}
  function move(delta){if(state.submittedAt)return;state.index=Math.max(0,Math.min(assessment.questions.length-1,state.index+delta));if(persist()){render();document.getElementById('question-title').focus();}}
+ function validState(value){
+  if(!value||typeof value!=='object'||Array.isArray(value)||value.version!==assessment.version||typeof value.answers!=='object'||!value.answers||Array.isArray(value.answers))return false;
+  if(value.student&&value.student!==cfg.student)return false;if(value.subject&&value.subject!==subject)return false;
+  if(!Number.isInteger(value.index)||value.index<0||value.index>=assessment.questions.length)return false;
+  if(value.startedAt&&!Number.isFinite(Date.parse(value.startedAt)))return false;if(value.submittedAt&&!Number.isFinite(Date.parse(value.submittedAt)))return false;
+  const ids=new Set(assessment.questions.map(q=>String(q.id)));for(const [id,a] of Object.entries(value.answers)){if(!ids.has(String(id))||!a||typeof a!=='object'||Array.isArray(a))return false;if(a.choice!==undefined&&(!Number.isInteger(a.choice)||a.choice<0||a.choice>4))return false;if(a.text!==undefined&&typeof a.text!=='string')return false;if(a.unknown!==undefined&&typeof a.unknown!=='boolean')return false;if(a.exposure!==undefined&&!['unsure','dont-know','not-taught'].includes(a.exposure))return false;}return true;
+ }
  function review(){const panel=document.getElementById('review-panel');panel.hidden=false;panel.innerHTML='<h2>Review responses</h2><p>“Answered” means a response is saved. You can revisit any question.</p><div class="review-grid">'+assessment.questions.map((q,i)=>`<button data-index="${i}">${i+1}: ${complete(q)?'Answered':'Unanswered'}</button>`).join('')+'</div>';panel.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.index=Number(b.dataset.index);persist();render();document.getElementById('question-title').focus();});}
  function submit(){
   if(state.submittedAt)return;
@@ -56,7 +63,7 @@
   if(!allowed.includes(subject))throw new Error('Choose an assessment from the dashboard.');
   const res=await fetch('assessments/'+subject+'.json');if(!res.ok)throw new Error('This assessment could not be loaded. Please retry.');assessment=await res.json();
   state=read()||{version:assessment.version,student:cfg.student,subject,answers:{},index:0,startedAt:new Date().toISOString(),submittedAt:null};
-  if(state.version!==assessment.version||!state.answers)throw new Error('Your saved attempt uses a different version. A parent must export it before continuing; it has not been overwritten.');
+  if(!validState(state))throw new Error('Your saved attempt uses a different or unsupported format. A parent must export it before continuing; it has not been overwritten.');
   state.index=Math.max(0,Math.min(assessment.questions.length-1,state.index||0));shell();render();
  }catch(error){main.innerHTML='<h1>Assessment needs attention</h1><p>'+escape(error.message)+'</p><p>Saved responses have not been replaced.</p><a href="index.html">Return home</a>';}}
  init();

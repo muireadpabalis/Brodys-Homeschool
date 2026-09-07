@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Home school">
+  <rect width="64" height="64" rx="14" fill="#195c66"/>
+  <path d="M10 30 32 12l22 18v24H10Z" fill="#fff8ed"/>
+  <path d="M20 29h24v25H20Z" fill="#fff"/>
+  <path d="M24 35c4-2 7-2 8 0 1-2 4-2 8 0v12c-4-2-7-2-8 0-1-2-4-2-8 0Z" fill="#e7a13a" stroke="#195c66" stroke-width="2" stroke-linejoin="round"/>
+</svg>

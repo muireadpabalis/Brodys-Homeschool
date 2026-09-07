@@ -12,9 +12,8 @@
  const original=renderAssignments;
  renderAssignments=function(){
   original();
-  const cards=[...assignmentList.children];
-  const filtered=data.assignments.filter(a=>(subjectFilter.value==='all'||a.subject===subjectFilter.value)&&(statusFilter.value==='all'||(statusFilter.value==='complete'&&a.complete)||(statusFilter.value==='open'&&!a.complete)));
-  cards.forEach((card,i)=>{const task=filtered[i];if(!task)return;const a=C.assignments.find(x=>x.id===task.id);
+   const cards=[...assignmentList.querySelectorAll('[data-assignment-id]')];
+   cards.forEach(card=>{const task=data.assignments.find(x=>x.id===card.dataset.assignmentId);if(!task)return;const a=C.assignments.find(x=>x.id===task.id);
    if(select.value!=='all'&&a?.week!==Number(select.value)){card.remove();return;}
    if(!a)return;
    card.dataset.elaId=a.id;
