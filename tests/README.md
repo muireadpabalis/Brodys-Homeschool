@@ -1,1 +1,5 @@
 The suites expect both repository folders as siblings, served on localhost:8765. Install Playwright in a separate test environment and install its Chromium browser, or set CHROME_PATH to an installed Chrome executable. Set HOMESCHOOL_QA_ROOT to the directory containing both repositories. Run browser-qa.cjs and edge-qa.cjs. Tests use isolated synthetic browser records. The recorded result JSON documents this delivery run. Source files require no testing dependency to run on GitHub Pages.
+
+`reading-qa.cjs` is a dependency-free Node verification for Brody's seven-week Reading course. It exercises curriculum structure, frozen baseline hashes, isolated persistence, exports, validated restore and rollback, stable assignment IDs, and syntax using synthetic records. Run it from the repository root with `node tests/reading-qa.cjs`.
+
+The Reading checks also cover immutable checkpoint bodies, parent reviews tied to a checkpoint, rejection of stale review saves and missing-review references, strict answer/result metadata validation, conflicting completed topic restores, and ELA/History/Reading filter coordination.

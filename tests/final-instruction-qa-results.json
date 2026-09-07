@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "testedAt": "2026-09-07T16:32:50.481Z",
+  "student": "Brody",
+  "courses": [
+    {
+      "title": "Brody’s Science Evidence Lab",
+      "weeks": 7
+    },
+    {
+      "title": "Brody’s Math Reasoning Lab",
+      "weeks": 7
+    }
+  ],
+  "checks": [
+    "Frozen baseline and finalized-course files match verified hashes",
+    "All seven weeks per course contain complete lessons, guided work, independent application, reasoning, parent preparation, portfolio evidence, and Friday checkpoints",
+    "Course keys preserve every seeded assessment and finalized-subject sentinel byte-for-byte",
+    "Drafts, immutable checkpoints, parent reviews, stale-review rejection, and exact-ID portal sync work",
+    "Seven stable assignments and portfolio entries persist without duplication",
+    "Work survives a fresh runtime over the same persistent storage and restores from export",
+    "Invalid imported and valid-JSON corrupt local records reject without mutation",
+    "Submitted assessment protection and recovery archive retain the original attempt",
+    "Assessment history stays bounded to 12 revisions across repeated saves",
+    "Stale persistence contexts merge distinct attempts without losing either recovery entry",
+    "Parent complete export/restore hooks and student/parent page assets are present",
+    "All repository JavaScript parses successfully"
+  ]
+}

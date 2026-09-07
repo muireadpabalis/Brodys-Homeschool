@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "testedAt": "2026-09-07T16:35:56.307Z",
+  "student": "Brody",
+  "viewport": "390x844",
+  "pagesChecked": 18,
+  "checks": [
+    "Dashboard shows current-week instructional cards",
+    "Brody Science is first and labeled Primary focus",
+    "Unsafe restored links are rejected while safe course links remain available",
+    "Portal assignment completion is repaired from saved course evidence",
+    "Filtered course assignments expose no manual completion or delete controls",
+    "Every course overview shows seven populated weeks",
+    "All weekly lesson pages show guided, independent, reasoning, vocabulary, and Friday-check sections",
+    "All checked student pages fit a 390px viewport",
+    "A complete checkpoint persisted across closing and reopening the page",
+    "Parent gate opened; all weeks rendered; review saved against the checkpoint",
+    "Healthy complete export includes portal and course records",
+    "Malformed course and school records remain exportable as raw recovery data",
+    "Existing portal evidence and baseline raw strings were preserved",
+    "Assessment history is labeled complete",
+    "No console errors, page errors, failed requests, or HTTP error responses"
+  ]
+}

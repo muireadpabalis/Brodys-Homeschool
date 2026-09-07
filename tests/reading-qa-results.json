@@ -1,0 +1,23 @@
+{
+  "testedAt": "2026-09-06T13:40:43.822Z",
+  "modules": 7,
+  "baselineHashes": {
+    "student": "84348C0CFB586601D42C0DAA0EA3FBEF7A717F2DD82ABA6FC617E32C5E85959B",
+    "parent": "C473573C64C8EF2A6E9EC2BF077EF7070CCC9540C617EA60EA6F553704B09F41"
+  },
+  "results": [
+    "Seven-week curriculum contract, progression, choices, objective keys, and culminating source packets are complete",
+    "Frozen Reading baseline student and parent definitions retain their verified hashes",
+    "All seven saves and repeated portal sync preserve the submitted baseline byte-for-byte and touch only Reading-owned records",
+    "Student export excludes the baseline and parent review; parent backup includes seven module records and the saved rubric",
+    "Validated restore recreates missing Reading work, keeps the surviving baseline untouched, and gives current local responses priority",
+    "Restore keeps topic, completion, objective result, and latest completed checkpoint coherent",
+    "Parent reviews require a completed checkpoint, retain immutable evidence, and reject stale forms after a newer checkpoint",
+    "Imported Reading work rejects wrong response types, unknown options, incomplete or cross-topic checkpoints, bad results, skills, assistance, and checks",
+    "Checkpoint mutation, conflicting completed topics, and reviews pointing to missing checkpoints reject atomically",
+    "Unknown modules reject before mutation and a failed multi-key restore rolls back earlier writes",
+    "Malformed Reading work stops safely without overwriting its raw recovery record",
+    "Portal decorators use stable assignment IDs and both student and parent Reading integrations are loaded",
+    "All Reading JavaScript parses successfully"
+  ]
+}
